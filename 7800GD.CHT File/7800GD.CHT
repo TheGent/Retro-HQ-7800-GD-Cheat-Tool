@@ -1,0 +1,432 @@
+#$24227e7e					; Crossbow, NTSC
+[Light Gun Calibration]		; cheat option, will always have ON/OFF
+?[Offset]=B{0-7}:3			; parameter, can be altered in-game, range 0-7, default 3
+:ON							; on action
+@$d3b=$d0,[Offset]			; bne offset
+:OFF						; off action
+@$d3b=$ea,$ea				; nop nop
+
+; --------------------------- RETAIL GAMES ---------------------------------------------------------
+
+#$a842d68c,$87e9e1c7		; Alien Brigade
+[Infinite Ammo]
+:FRAME
+@<$AE=$2f					; slot 1
+@<$D2=8						; slot 2
+[Infinite Health]
+:FRAME
+@<$D5=5
+
+[Weapon Select Slot 1]		; 1, Hand Gun, 2 Five Burst Automatic Machine Gun, 3 Dart Gun (Disable for Flame Thrower Effect)
+?[Slot 1 Weapon]=B{1-3}:1 	;1-3 default 1 - Enable your selection and then restart. On level load you will have your desired Slot 1 weapon.
+:FRAME
+@<$78=[Slot 1 Weapon]
+
+[Weapon Select Slot 2]		; 4 Grenades, 5 Rocket Launcher, 6 Flame Thrower
+?[Slot 2 Weapon]=B{4-6}:4 	;0-4 default 4 - Enable your selection and then restart. On level load you will have your desired Slot 2 weapon.
+:FRAME
+@<$79=[Slot 2 Weapon]
+
+[Level Select]				; 0 Level 1, 1 Level 2, 2 Level 3, 03 Level 4, 04 Level 5 (Default Level 1)
+?[Level]=B{0-5}:0 			;0-5 default 0 ; Enable your selection and then restart. On level load you will be there. The same applies at the end of a Level. Make sure you disable so you do not re-play the same level.
+:FRAME
+@<$77=[Level Select]
+
+
+#$0a848ed6					; Asteroids
+[Infinite Lives]
+:FRAME
+@<$52=5,5,5					; 1p, 2p, co-op
+
+#$f7f1b8c1,$9436c704		; Basketbrawl
+[Freeze Timer]
+:FRAME
+@<$75=$59
+[Player 2 Scores 0]
+:FRAME
+@<$2262=0
+[Player 1 Scores 999]
+:FRAME
+@<$2260=$99,9
+
+#$6aa8dd24,$e8457a5e		; Centipede
+[Infinite Lives]
+:FRAME
+@<$210E=3
+
+#$3a2106f4,$04f607c9		; Commando
+[Infinite Bombs]
+:FRAME
+@<$64=$99,$99				; p1, p2
+[Infinite Lives]
+:FRAME
+@<$27B4=$99,$99				; p1, p2
+
+#$dba8f21c,$d6f6cb9f		; Dark Chambers
+[Infinite Health]
+:FRAME
+@<$1933=$9f,$9f				; p1, p2
+[Infinite Keys]
+:FRAME
+@<$192d=$9f,$9f				; p1, p2
+[All Upgrades]				; this must be disabled at the end of each level to continue
+:FRAME
+@<$1931=$e0,$e0				; p1, p2
+[Infinite Bombs]
+:FRAME
+@<$192f=$05,$05				; p1, p2
+
+#$67b0e7da,$769c955a		; Desert Falcon
+[Infinite Lives]
+:FRAME
+@<$61=9,9
+
+#$b1ee6c24,$1d0a3991		; Dig Dug
+[Infinite Lives]
+:FRAME
+@<$9E=11
+[Invincible]
+:FRAME
+@<$83=0
+
+#$cd84e6e5,$f999ec43		; Donkey Kong
+[Infinite Lives]
+:FRAME
+@<$90=9
+[Maximum Bonus]
+:FRAME
+@<$1FA4=$a0
+
+#$260fdd9f,$19633002		; Donkey Kong Jr
+[Infinite Lives]
+:FRAME
+@<$90=10
+[Maximum Bonus]
+:FRAME
+@<$277C=$99
+
+#$a3a3a1b6,$f151df11		; Double Dragon
+[Infinite Health]
+:FRAME
+@<$1FFB=$9B					; p1
+@<$2004=$9B					; p2
+[Infinite Lives]
+:FRAME
+@<$190B=16					; p1
+@<$191F=16					; p2
+[Freeze Timer]
+:FRAME
+@<$276F=6,9
+
+#$b4abcecb,$407c4bfd		; Fatal Run Note: 
+[Freezer Timer]				; Enable all cheats after the Start Screen.
+:FRAME
+@<$225E=0
+[Infinite Fuel]
+:FRAME
+@<$2270=$FE
+[No Damage]
+:FRAME
+@<$226C=$FF
+[Infinite Missiles]
+:FRAME
+@<$2279=9
+[Infinite Smoke Screen]
+:FRAME
+@<$227B=9
+[Infinite Machine Gun]
+:FRAME
+@<$2273=9
+[Infinite Oil Slick]
+:FRAME
+@<$2276=9
+[Infinite Shield]
+:FRAME
+@<$2277=9
+
+#$6648c508,$51ae8cdc		; Fight Night
+[Freeze Timer]
+:FRAME
+@<$CE=$39,$35
+
+#$c8ee0db2,$e0be688c		; Food Fight
+[Infinite Lives]
+:FRAME
+@<$2678=3,3					; p1, p2
+
+#$3f953124,$4e627e2f		; Galaga
+[Infinite Lives]
+:FRAME
+@<$B1=3,3					; p1, p2
+
+#$d25a68fe,$1d4cee3a		; Hat Trick
+[Freeze Timer]
+:FRAME
+@<$186F=$59
+[Player 2 Scores 0]
+:FRAME
+@<$18C3=0
+[Player 1 Scores 99]
+:FRAME
+@<$18C1=$99
+
+#$a4f9b56a,$e3aa59e9		; Ikari Warriors
+[Infinite Lives]
+:FRAME
+@<$229F=$E3,$E3				; p1, p2
+[Invincible]
+:FRAME
+@<$229B=$40,$40				; p1, p2
+[Infinite Ammo]
+:FRAME
+@<$22A3=$99,$99				; p1, p2
+[Infinite Grenades]
+:FRAME
+@<$22A5=$99,$99				; p1, p2
+
+#$90759dd8					; Joust
+[Infinite Lives]
+:FRAME
+@<$8C=5
+
+#$adb2b4cf,$7b17c856		; Karateka
+[Infinite Health]
+:FRAME
+@<$18BF=13
+
+#$1afa628e,$5ee91772		; Kung Fu Master
+[Infinite Health]
+:FRAME
+@<$CB=$27
+[Infinite Lives]			; do not enable cheat until in game
+:FRAME
+@<$9D=3,3					; p1, p2
+
+#$890b48b0,$5022072e		; Mario Brothers
+[Infinite Lives]
+:FRAME
+@<$A1=3						; p1, Mario
+@<$B2=3						; p2, Luigi
+
+#$af9007b4,$8c4a3a76		; Mat Mania Challenge
+[Freeze Timer]
+:FRAME
+@<$8E=59
+[Instant Win on Pin]
+:FRAME
+@<$8B=2
+[Player 2 Can't Win]
+:FRAME
+@<$8C=$2B
+
+#$a2cf0ce2,$1a676a61		; Mean 18 Golf
+[Always First Stroke]
+:FRAME
+@<$E9=1
+
+#$842cc2f2,$e2b91a56		; Midnight Mutants
+[Blood Always 100% Pure]
+:FRAME
+@<$C4=100
+[Infinite Health]
+:FRAME
+@<$C5=$27
+
+#$ee788da4,$ad6d9894		; Motor Psycho
+[Freeze Timer]
+:FRAME
+@<$2538=60
+
+#$c707e77a,$a255c8cf		; Ms Pac-Man
+[Infinite Lives]
+:FRAME
+@<$A4=6,6					; p1, p2
+
+#$1d40f81b,$7d7f2b45		; Ninja Golf
+[Infinite Health]
+:FRAME
+@<$AD=$2A
+[Infinite Lives]
+:FRAME
+@<$9D=99
+[Infinite Throwing Stars]
+:FRAME
+@<$95=99
+
+#$cfb1c822,$cf746617		; One-on-One Basketball
+[Infinite Shot Time]
+:FRAME
+@<$21AD=24
+[Freeze Overall Timer]
+:FRAME
+@<$2108=0,4
+[Player 1 has 999 Score]
+:FRAME
+@<$21B0=9
+@<$2104=$99
+[Player 2 has 0 Score]
+:FRAME
+@<$2105=0
+
+#$296e1311,$1024d033		; Planet Smashers
+[Infinite Lives]
+:FRAME
+@<$80=9
+[Infinite Shield]
+:FRAME
+@<$7E=6
+[Infinite Earth Shield]
+:FRAME
+@<$83=255
+
+#$978dd22e					; Rampage
+[Infinite Health]
+:FRAME
+@<$1BDD=0					; p1
+@<$1BFE=0					; p2
+
+#$f04e77ee					; Robotron 2084
+[Infinite Lives]
+:FRAME
+@<$E0=4,4					; p1, p2
+
+[Max Speed]
+:FRAME
+@<$E4=4,4					; p1, p2
+
+
+#$1cd062bd,$2cdb00c2		; Scrapyard Dog
+[Infinite Lives]
+:FRAME
+@<$22AF=3
+[Infinite Shields]
+:FRAME
+@<$22B1=1
+[Infinite Cans]
+:FRAME
+@<$22A7=1
+[Infinite Magic Cans]
+:FRAME
+@<$22A9=1
+[Infinite Bombs]
+:FRAME
+@<$22AB=1
+
+#$3cb02a32					; Tank Command
+[Infinite Lives]
+:FRAME
+@<$241E=$84
+[Infinite Energy]
+:FRAME
+@<$26C3=7
+[Infinite Ammo]
+:FRAME
+@<$26D9=$50
+[Infinite Fuel]
+:FRAME
+@<$26DA=$18
+
+#$e0af7bdc,$cd8265c5		; Tower Toppler
+[Infinite Lives]
+:FRAME
+@<$BA=8,8					; p1, p2
+
+#$88205a78		;			Xenophobe (NTSC) (Atari) (1989) (5FD9A141)
+[Infinite Max Health]
+:FRAME
+@<$22A4=$99,$99,$99,$99,$99,$99,$99,$99
+
+[Ultimate Score]
+:FRAME
+@<$229C=$99,$99,$99,$99,$99,$99,$99,$99,$99,$99,$99,$99
+
+[255 Xenos Killed]
+:FRAME
+@<$22BD=$FF
+
+[Weapon Select]				;0 Fist, 1 Phaser, 2 Laser Pistol, 3 Lightning Riffle, 4 Poofer Gun (Kills Pests in a Poof), 5 Critter Deployment (Does not kill), 6 Grenades (Default 1 Pistol)
+?[Weapon]=B{0-6}:1 			;0-6 default 1
+:FRAME
+@<$22B5=[Weapon]
+
+#$9f22f55b					;Xenophobe (PAL) (Atari) (1989) (CF0E44F1)
+[Infinite Max Health]
+:FRAME
+@<$22A4=$99,$99,$99,$99,$99,$99,$99,$99
+
+[Ultimate Score]
+:FRAME
+@<$229C=$99,$99,$99,$99,$99,$99,$99,$99,$99,$99,$99,$99
+
+[255 Xenos Killed]
+:FRAME
+@<$22BF=$FF
+
+[Weapon Select]				;0 Fist, 1 Phaser, 2 Laser Pistol, 3 Lightning Riffle, 4 Poofer Gun (Kills Pests in a Poof), 5 Critter Deployment (Does not kill), 6 Grenades (Default 1 Pistol)
+?[Weapon Select]=B{0-6}:1 	;0-6 default 1
+:FRAME
+@<$22B7=[Weapon Select]
+
+#$1e8a1819,$49d2c0c6		;Xevious (NTSC) (Atari) (1987) (75FC124F) & Xevious (PAL) (Atari) (1987) (D5AC738B)
+[Infinite Lives Player 1]
+:FRAME
+@<$1A6E=9
+[Infinite Lives Player 2]
+:FRAME
+@<$1A6F=9
+
+; --------------------------- HOME BREW ---------------------------------------------------------
+
+#$fdbdd839					; 7iX (20220305) (A8F12175)
+[Infinite Lives]
+:FRAME
+@<$18CF=$1C
+
+#$21b6927e					; A Roach In Space - Part II (HomeBrew)
+[Infinite Health]
+:FRAME
+@<$F4=5			
+[Infinite Lives]
+:FRAME
+@<$1A3=5
+[Infinite Bombs]			
+:FRAME
+@<$181=1					; slot 1
+@<$F1=1						; slot 2
+[Have 999999 Score]			
+:FRAME
+@<$1A6=$99,$99				
+@<$1A8=$99		
+
+#$cb44426f					; Alpha Race (20150920) (DC81DDD0)
+[Infinite Lives]
+:FRAME
+@<$E8=4
+
+#$b4d5ce73					; Apple Snaffle (v1_30F) (20100803) (3DD0C2B7)
+[00 Apples to go (On Pickup] ; Disable on 00 Apples to clear level
+:FRAME
+@<$2104=1
+
+[Freeze Timer]
+:FRAME
+@<$210A=2
+@<$210B=0
+
+#$1b27a847					; Arkanoid (Propane13) (20110911) (3F544EDB)
+[Infinite Lives] 			
+:FRAME
+@<$4E=7
+
+[Ball Speed]				; 0, Slow, 1 Normal, 4,Fast, 5 Insane (Default speed is 1)
+?[Ball Speed Select]=B{0-5}:1 		;0-5 default 1 
+:FRAME
+@<$51=[Ball Speed Select]
+
+[Ball Size]				; 0, Normal, 4 Long (Default Size is 0)
+?[Bat Size Select]=B{0-4}:0 	;0-4 default 0
+:FRAME
+@<$63=[Bat Size Select]
+
+
+
