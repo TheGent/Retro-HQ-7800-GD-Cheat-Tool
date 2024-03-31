@@ -1,0 +1,72 @@
+﻿Imports System.Diagnostics
+Imports System.IO
+Public Class Main
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'This auto sets the dropdown bar to selet the chosen value on start up
+        If ComboBox1.SelectedIndex = -1 Then
+            ComboBox1.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub Button_Submit_Click(sender As System.Object, e As System.EventArgs) Handles Button_Submit.Click
+        'This is the ComboBox showing your options in the dropdown.
+
+        IO.File.WriteAllBytes("7800GDCheat.exe", My.Resources._7800GDCheat)
+
+        If Me.ComboBox1.Text = "Parse 7800GD.CHT File" Then
+            Dim proc As Process = Nothing
+            Try
+                proc = New Process()
+                IO.File.WriteAllText("parse.Bat", My.Resources.parse)
+                proc.StartInfo.FileName = "parse.Bat"
+                proc.StartInfo.CreateNoWindow = False
+                proc.Start()
+                Dim windowStyle As Integer : windowStyle = 0
+                proc.WaitForExit()
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace.ToString())
+            End Try
+        End If
+
+        If Me.ComboBox1.Text = "Check ROM.a78 CRC" Then
+            Dim proc As Process = Nothing
+            Try
+                proc = New Process()
+                IO.File.WriteAllText("crc.Bat", My.Resources.crc)
+                proc.StartInfo.FileName = "crc.Bat"
+                proc.StartInfo.CreateNoWindow = False
+                proc.Start()
+                Dim windowStyle As Integer : windowStyle = 0
+                proc.WaitForExit()
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace.ToString())
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        AboutBox.Show()
+        Me.Hide()
+        File.Delete("7800GDCheat.exe")
+        File.Delete("parse.Bat")
+        File.Delete("crc.Bat")
+    End Sub
+
+
+    Private Sub Button_Close_Click(sender As System.Object, e As System.EventArgs) Handles Button_Close.Click
+        Close()
+        File.Delete("7800GDCheat.exe")
+        File.Delete("parse.Bat")
+        File.Delete("crc.Bat")
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://www.retrohq.co.uk")
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
+        Process.Start("https://www.retrohq.co.uk")
+    End Sub
+End Class
