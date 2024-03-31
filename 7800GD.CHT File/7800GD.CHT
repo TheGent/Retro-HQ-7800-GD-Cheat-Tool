@@ -435,3 +435,11 @@
 [Infinite Lives Player 2]
 :FRAME
 @<$89=$0A
+
+#$3047932d,$c957cbb8		; Asteroids Deluxe (NTSC) (20071014) (56239D62) & Asteroids Deluxe (PAL) (20071014) (AB72EA89)
+[Infinite Lives]
+:FRAME
+@<$1B7E=5
+[Infinite Shield]
+:FRAME
+@<$1B78=$79
