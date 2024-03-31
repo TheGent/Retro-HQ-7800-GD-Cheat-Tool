@@ -428,5 +428,10 @@
 :FRAME
 @<$63=[Bat Size Select]
 
-
-
+#$9382a174					; Armor Attack II (20230627) (6CF67401)
+[Infinite Lives Player 1]
+:FRAME
+@<$88=$0A
+[Infinite Lives Player 2]
+:FRAME
+@<$89=$0A
