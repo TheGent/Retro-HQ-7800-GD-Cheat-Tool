@@ -453,7 +453,6 @@
 :FRAME
 @<$1B78=$79
 
-
 #$103569a1					; Astro Blaster (20230627) (FB86A5A0)
 [Infinite Fuel]
 :FRAME
@@ -467,3 +466,21 @@
 [Invincible]				; This gives you Invincibility and can never die
 :FRAME
 @<$1E80=0
+
+#$103569a1					; Astro Fighter (v1_1) (20230826) (631193C5)
+[Infinite Lives (Player 1)]
+:FRAME
+@<$71=9
+[Infinite Lives (Player 2)]
+:FRAME
+@<$72=9
+[Infinite Energy (Player 1)]
+:FRAME
+@<$74=$C2
+[Infinite Energy (Player 2)]
+:FRAME
+@<$73=$C2
+[Invincible (Both Players)]				; This gives you Invincibility and can never die
+:FRAME
+@<$1D40=0
+@<$2264=$12
