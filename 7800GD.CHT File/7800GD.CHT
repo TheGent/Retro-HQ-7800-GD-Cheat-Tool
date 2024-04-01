@@ -1,3 +1,12 @@
+; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
+; --------------------------- Version 1.0 1st April 2024
+; --------------------------- copyright © Gent  - https://github.com/TheGent
+; --------------------------- you can contact me on the Emucheats Discord server
+; --------------------------- here at https://discord.gg/wa4mPRCBFH
+
+
+; --------------------------- Start of Data FIle ---------------------------------------------------------
+
 #$24227e7e					; Crossbow, NTSC
 [Light Gun Calibration]		; cheat option, will always have ON/OFF
 ?[Offset]=B{0-7}:3			; parameter, can be altered in-game, range 0-7, default 3
@@ -443,3 +452,18 @@
 [Infinite Shield]
 :FRAME
 @<$1B78=$79
+
+
+#$103569a1					; Astro Blaster (20230627) (FB86A5A0)
+[Infinite Fuel]
+:FRAME
+@<$71=$40
+[Infinite Lives]
+:FRAME
+@<$75=6
+[Temp always low]			; This gives you infinite lasers
+:FRAME
+@<$78=0
+[Invincible]				; This gives you Invincibility and can never die
+:FRAME
+@<$1E80=0
