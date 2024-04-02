@@ -468,18 +468,18 @@
 @<$1E80=0
 
 #$1b9a7f32					; Astro Fighter (v1.1) (20230826) (631193C5)
-[Infinite Lives (Player 1)]
+[Infinite Lives Player 1]
 :FRAME
 @<$71=9
-[Infinite Lives (Player 2)]
+[Infinite Lives Player 2]
 :FRAME
 @<$72=9
-[Infinite Energy (Player 1)]
-:FRAME
-@<$74=$C2
-[Infinite Energy (Player 2)]
+[Infinite Energy Player 1]
 :FRAME
 @<$73=$C2
+[Infinite Energy Player 2]
+:FRAME
+@<$74=$C2
 [Invincible (Both Players)]	; This gives you Invincibility and can never die
 :FRAME
 @<$1D40=0
