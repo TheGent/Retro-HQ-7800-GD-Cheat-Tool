@@ -480,7 +480,23 @@
 [Infinite Energy (Player 2)]
 :FRAME
 @<$73=$C2
-[Invincible (Both Players)]				; This gives you Invincibility and can never die
+[Invincible (Both Players)]	; This gives you Invincibility and can never die
 :FRAME
 @<$1D40=0
 @<$2264=$12
+
+#$230ef94c					; Baby Pac-Man (20230627) (4E4C4D2D
+[Infinite Lives (Player 1)]
+:FRAME
+@<$90=9
+[Infinite Lives (Player 2)]
+:FRAME
+@<$91=9
+
+[Invincible (Both Players)]	; This gives you Invincibility and can never die. 
+:FRAME						; Turn off and enter pinball to resume normal on pinball exit
+@<$26E3=1
+@<$26E4=1
+@<$26E5=1
+@<$26E6=1
+
