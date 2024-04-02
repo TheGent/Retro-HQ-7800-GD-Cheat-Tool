@@ -467,7 +467,7 @@
 :FRAME
 @<$1E80=0
 
-#$103569a1					; Astro Fighter (v1_1) (20230826) (631193C5)
+#$1b9a7f32					; Astro Fighter (v1.1) (20230826) (631193C5)
 [Infinite Lives (Player 1)]
 :FRAME
 @<$71=9
@@ -485,7 +485,7 @@
 @<$1D40=0
 @<$2264=$12
 
-#$230ef94c					; Baby Pac-Man (20230627) (4E4C4D2D
+#$230ef94c					; Baby Pac-Man (20230627) (4E4C4D2D)
 [Infinite Lives (Player 1)]
 :FRAME
 @<$90=9
