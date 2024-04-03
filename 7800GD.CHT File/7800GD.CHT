@@ -500,3 +500,10 @@
 @<$26E5=1
 @<$26E6=1
 
+#$c7cad7d3					; BonQ (Final AtariAge) (E330FA66)
+[Infinite Lives (Both Players)]
+:FRAME
+@<$1FCB=9
+
+
+
