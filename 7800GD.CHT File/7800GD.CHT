@@ -486,14 +486,14 @@
 @<$2264=$12
 
 #$230ef94c					; Baby Pac-Man (20230627) (4E4C4D2D)
-[Infinite Lives (Player 1)]
+[Infinite Lives Player 1]
 :FRAME
 @<$90=9
-[Infinite Lives (Player 2)]
+[Infinite Lives Player 2]
 :FRAME
 @<$91=9
 
-[Invincible (Both Players)]	; This gives you Invincibility and can never die. 
+[Invincible Both Players]	; This gives you Invincibility and can never die. 
 :FRAME						; Turn off and enter pinball to resume normal on pinball exit
 @<$26E3=1
 @<$26E4=1
@@ -501,9 +501,16 @@
 @<$26E6=1
 
 #$c7cad7d3					; BonQ (Final AtariAge) (E330FA66)
-[Infinite Lives (Both Players)]
+[Infinite Lives Both Players]
 :FRAME
 @<$1FCB=9
 
-
+#$8c68914d					; Cannon in D - D for Defense (Demo 03) (20220130) (3C0C960C)
+[Infinite Health]
+:FRAME
+@<$F0=9
+[Have 9999 Score]
+:FRAME
+@<$1A7=$99
+@<$1A8=$99
 
