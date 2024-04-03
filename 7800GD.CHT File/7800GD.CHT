@@ -514,3 +514,15 @@
 @<$1A7=$99
 @<$1A8=$99
 
+#$3229953a					; Cartesian Chaos (v11) (20221218) (56CC4AA6)
+[Infinite Health Both Players]
+:FRAME
+@<$182=5
+[Have 999999 Score]
+:FRAME
+@<$17C=$99
+@<$17D=$99
+@<$17E=$99
+@<$17F=$99
+@<$180=$99
+@<$181=$99
