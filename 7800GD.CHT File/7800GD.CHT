@@ -566,3 +566,8 @@
 [Infinite Lives Player 2]		
 :FRAME
 @<$98=9
+
+#$0bc0e5b6							; Cubicle Chaos (20141205) (9D0B4951)
+[Infinite Health]		
+:FRAME
+@<$2038=1
