@@ -551,4 +551,10 @@
 :FRAME
 @<$EE=0
 
-
+#$9e05014a,$9e05014a				; Crazy Brix (Joystick) (20160427) (32A87B61) & Crazy Brix (Paddle) (20160427) (32A87B61)
+[Infinite Lives Player 1]		
+:FRAME
+@<$59=5
+[Infinite Lives Player 2]		
+:FRAME
+@<$5A=5
