@@ -526,3 +526,13 @@
 @<$17F=$99
 @<$180=$99
 @<$181=$99
+
+#$b5c62301					; Chase (20201231) (C2C34433)
+[Infinite Max Lives]		
+:FRAME
+@<$22E2=$99
+@<$22E1=9
+[1 Gem to clear level]		; Enable to clear level on 1 gem pickup. Disable to return to normal on next level
+:FRAME
+@<$1AA=0
+@<$1AB=1
