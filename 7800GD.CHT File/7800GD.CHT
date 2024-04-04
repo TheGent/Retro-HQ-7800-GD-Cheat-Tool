@@ -588,3 +588,14 @@
 :FRAME
 @<$26BB=0
 @<$26BE=1
+
+#$0a9826ac,$403f7b02				; FailSafe (NTSC) (20100227) (67EBF1ED) & FailSafe (PAL) (20100227) (56AC5864)
+[Infinite Lives]		
+:FRAME
+@<$9C=$97
+[Freeze Timer]		
+:FRAME
+@<$98=98
+[Infinite Fuel]								
+:FRAME
+@<$96=22
