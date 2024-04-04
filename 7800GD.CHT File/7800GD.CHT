@@ -558,3 +558,11 @@
 [Infinite Lives Player 2]		
 :FRAME
 @<$5A=5
+
+#$0a37cdb3,$0123b497				; Crazy Otto (NTSC) (20230627) (D543ABB0) & Crazy Otto (PAL) (20230627) (CAB285AD)
+[Infinite Lives Player 1]		
+:FRAME
+@<$A2=9
+[Infinite Lives Player 2]		
+:FRAME
+@<$98=9
