@@ -536,3 +536,19 @@
 :FRAME
 @<$1AA=0
 @<$1AB=1
+
+#$7bf5fc7e					; Cosmic Cabbie (20201229) (BAA151F9)
+[Infinite Lives]		
+:FRAME
+@<$ED=6
+[Infinite Fuel]		
+:FRAME
+@<$15A=$F0
+[Infinite 99 Cash]		
+:FRAME
+@<$159=$F0
+[Invincible]				; This allows you to crash into and pass through things without dying.		
+:FRAME
+@<$EE=0
+
+
