@@ -576,3 +576,15 @@
 [Infinite Lives]		
 :FRAME
 @<$93=9
+
+#$fc454635							; Dungeon Stalker (20151022) (BA519F24)
+[Infinite Lives]		
+:FRAME
+@<$14C=9
+[Infinite Arrows]		
+:FRAME
+@<$14D=8
+[Invincible]						; Like God Mode but does not run out or speed up in sound		
+:FRAME
+@<$26BB=0
+@<$26BE=1
