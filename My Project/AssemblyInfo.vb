@@ -10,10 +10,10 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Retro HQ 7800 GD Cheat Tool")> 
 <Assembly: AssemblyDescription("This is a Tool to Parse (Check for errors) in the Retro HQ 7800 GD 7800GD.CHT File & check for the correct CRC information from an Atari ROM to be used for the 7800GD.CHT file.")> 
-<Assembly: AssemblyCompany("Retro HQ")> 
+<Assembly: AssemblyCompany("Gent's Retro HQ 7800 GD Cheat Tool GitHub")> 
 <Assembly: AssemblyProduct("Retro HQ 7800 GD Cheat Tool")> 
-<Assembly: AssemblyCopyright("© Retro HQ 2024")> 
-<Assembly: AssemblyTrademark("Retro HQ ©")> 
+<Assembly: AssemblyCopyright("© Gent / Retro HQ 2024")> 
+<Assembly: AssemblyTrademark("Retro HQ 7800 GD Cheat Tool GitHub")> 
 
 <Assembly: ComVisible(False)>
 

@@ -63,10 +63,14 @@ Public Class Main
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Process.Start("https://www.retrohq.co.uk")
+        Process.Start("https://www.retrohq.co.uk/products/atari-7800-gamedrive-flash-cartridge")
     End Sub
 
     Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
-        Process.Start("https://www.retrohq.co.uk")
+        Process.Start("https://github.com/TheGent/Retro-HQ-7800-GD-Cheat-Tool")
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Process.Start("https://github.com/TheGent/Retro-HQ-7800-GD-Cheat-Tool/tree/main/7800GD.CHT%20File")
     End Sub
 End Class

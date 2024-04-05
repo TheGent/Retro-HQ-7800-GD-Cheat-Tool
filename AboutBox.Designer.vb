@@ -23,7 +23,6 @@ Partial Class AboutBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutBox))
         Me.OKButton = New System.Windows.Forms.Button()
         Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.LabelCompanyName = New System.Windows.Forms.Label()
@@ -49,7 +48,7 @@ Partial Class AboutBox
         'TextBoxDescription
         '
         Me.TextBoxDescription.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBoxDescription.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBoxDescription.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
         Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
@@ -65,6 +64,7 @@ Partial Class AboutBox
         '
         'LabelCompanyName
         '
+        Me.LabelCompanyName.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LabelCompanyName.Location = New System.Drawing.Point(136, 75)
         Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
@@ -72,7 +72,7 @@ Partial Class AboutBox
         Me.LabelCompanyName.Name = "LabelCompanyName"
         Me.LabelCompanyName.Size = New System.Drawing.Size(257, 17)
         Me.LabelCompanyName.TabIndex = 0
-        Me.LabelCompanyName.Text = "Retro HQ ©"
+        Me.LabelCompanyName.Text = "Retro HQ 7800 GD Cheat Tool GitHub"
         Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright
@@ -115,7 +115,7 @@ Partial Class AboutBox
         '
         Me.LogoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
+        Me.LogoPictureBox.Image = Global.Retro_HQ_7800_GD_Cheat_Tool.My.Resources.Resources.About_Logo
         Me.LogoPictureBox.Location = New System.Drawing.Point(3, 3)
         Me.LogoPictureBox.Name = "LogoPictureBox"
         Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)

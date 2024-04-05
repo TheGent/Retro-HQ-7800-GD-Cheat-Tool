@@ -29,7 +29,12 @@ Partial Class Main
         Me.Button_Close = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -51,7 +56,8 @@ Partial Class Main
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.IntegralHeight = False
         Me.ComboBox1.Items.AddRange(New Object() {"<------ Option Selection ------>", "Parse 7800GD.CHT File", "Check ROM.a78 CRC"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 200)
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 233)
+        Me.ComboBox1.MinimumSize = New System.Drawing.Size(314, 0)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(314, 21)
         Me.ComboBox1.TabIndex = 1
@@ -59,7 +65,7 @@ Partial Class Main
         '
         'Button_Submit
         '
-        Me.Button_Submit.Location = New System.Drawing.Point(332, 200)
+        Me.Button_Submit.Location = New System.Drawing.Point(332, 232)
         Me.Button_Submit.Name = "Button_Submit"
         Me.Button_Submit.Size = New System.Drawing.Size(176, 33)
         Me.Button_Submit.TabIndex = 2
@@ -68,7 +74,7 @@ Partial Class Main
         '
         'Button_Close
         '
-        Me.Button_Close.Location = New System.Drawing.Point(194, 242)
+        Me.Button_Close.Location = New System.Drawing.Point(194, 274)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(314, 33)
         Me.Button_Close.TabIndex = 3
@@ -77,7 +83,7 @@ Partial Class Main
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 242)
+        Me.Button1.Location = New System.Drawing.Point(12, 274)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(176, 33)
         Me.Button1.TabIndex = 4
@@ -86,23 +92,65 @@ Partial Class Main
         '
         'LinkLabel1
         '
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Blue
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Location = New System.Drawing.Point(377, 174)
+        Me.LinkLabel1.Location = New System.Drawing.Point(62, 194)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(97, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(190, 13)
         Me.LinkLabel1.TabIndex = 5
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "www.retrohq.co.uk"
+        Me.LinkLabel1.Text = "Retro HQ 7800 GD Product Link"
+        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.RoyalBlue
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Retro_HQ_7800_GD_Cheat_Tool.My.Resources.Resources.rhq_icon
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 177)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(44, 45)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Retro_HQ_7800_GD_Cheat_Tool.My.Resources.Resources.Github_Logo
+        Me.PictureBox3.Location = New System.Drawing.Point(300, 177)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(44, 45)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 8
+        Me.PictureBox3.TabStop = False
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.Blue
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel2.Location = New System.Drawing.Point(350, 194)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(158, 13)
+        Me.LinkLabel2.TabIndex = 7
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Latest 7800 GD Cheat FIle"
+        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.RoyalBlue
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(520, 287)
+        Me.ClientSize = New System.Drawing.Size(520, 317)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button_Close)
@@ -115,6 +163,8 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RetroHQ 7800 Cheat Tool"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,5 +175,8 @@ Partial Class Main
     Friend WithEvents Button_Close As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
 
 End Class
