@@ -1,5 +1,5 @@
 ; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
-; --------------------------- Version 1.0 1st April 2024
+; --------------------------- Version 1.0 7th April 2024
 ; --------------------------- copyright © Gent  - https://github.com/TheGent
 ; --------------------------- you can contact me on the Emucheats Discord server
 ; --------------------------- here at https://discord.gg/wa4mPRCBFH
@@ -599,3 +599,8 @@
 [Infinite Fuel]								
 :FRAME
 @<$96=22
+
+#$b19f73c4							; Fat Axl (20160613) (9D14DC33)
+[Infinite Lives]		
+:FRAME
+@<$153=$9
