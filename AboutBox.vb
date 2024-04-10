@@ -27,11 +27,6 @@
     Private Sub LogoPictureBox_Click(sender As System.Object, e As System.EventArgs) Handles LogoPictureBox.Click
         Process.Start("https://github.com/TheGent/Retro-HQ-7800-GD-Cheat-Tool")
     End Sub
-
-    Private Sub TextBoxDescription_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBoxDescription.TextChanged
-
-    End Sub
-
     Private Sub LabelCompanyName_Click(sender As System.Object, e As System.EventArgs) Handles LabelCompanyName.Click
         Process.Start("https://github.com/TheGent/Retro-HQ-7800-GD-Cheat-Tool")
     End Sub

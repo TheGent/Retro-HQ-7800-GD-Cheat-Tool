@@ -1,5 +1,5 @@
 ; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
-; --------------------------- Version 1.0 7th April 2024
+; --------------------------- Version 1.0 9th April 2024
 ; --------------------------- copyright © Gent  - https://github.com/TheGent
 ; --------------------------- you can contact me on the Emucheats Discord server
 ; --------------------------- here at https://discord.gg/wa4mPRCBFH
@@ -595,12 +595,115 @@
 @<$9C=$97
 [Freeze Timer]		
 :FRAME
-@<$98=98
+@<$98=$98
 [Infinite Fuel]								
 :FRAME
-@<$96=22
+@<$96=$22
 
-#$b19f73c4							; Fat Axl (20160613) (9D14DC33)
+#$b19f73c4					 ; Fat Axl (20160613) (9D14DC33)
 [Infinite Lives]		
 :FRAME
-@<$153=$9
+@<$153=9
+
+#$ce43e307		            ; Flappy Bird (Beta) (20141221) (E6E1C828)
+[Invincible]		        ; Enable when game starts & disable if you crash
+:FRAME
+@<$4E=1
+
+#$91a9e032		; Freeway (v0_88) (20221010) (7D03A3B2)
+[Freeze Timer]
+:FRAME
+@<$181=$3C
+[Have 99 Score]
+:FRAME
+@<$19C=$63
+
+#$14c5ef57		; Frenzy (w-Berzerk)
+[Infinite Lives Player 1]
+:FRAME
+@<$41=6
+[Infinite Lives Player 2]
+:FRAME
+@<$42=6
+[Have 999999 Score Player 1]
+:FRAME
+@<$43=$99
+@<$44=$99
+@<$45=$98
+[Invincible Player 1]		; Disable on Player 2's turn
+:FRAME
+@<$2634=0
+[Invincible Player 2]   	; Disable on Player 1's turn
+:FRAME
+@<$2635=0
+
+#$7403BD1B					; Froggie
+[Infinite Lives]
+:FRAME
+@<$d8=$64
+[Infinite Time]
+:FRAME
+@<$ea=$3c
+[Invincible]               	; Disable if you get stuck
+:FRAME
+@<$ed=0
+
+#$FDAE9B71				; Frogus
+[Infinite Lives]		; Only enable once in game or it will hang.
+:FRAME
+@<$EA=5
+[Invincible]			; Disable to stop bonus racking up and re-enable.
+:FRAME
+@<$1FE=$5A
+
+#$94C8D575					; Galaxian
+[Infinite Lives Player 1]
+:FRAME
+@<$FD=5
+[Infinite Lives Player 2]
+:FRAME
+@<$FE=5
+[Invincible Both Players]	; This makes you invincible and able to rack up points if you do not move from collisions.
+:FRAME
+@<$25E6=0
+@<$25E8=8
+
+#$FD811139		; Game of the Bear-Polar Opposites
+[Infinite Lives]
+:FRAME
+@<$FB=$63
+[Invincible (Rewind)]	; This places you back to where you were before you die. Disable to use Walk on Air code.
+:FRAME
+@<$F4=0
+[Walk on Air (Press A to Rise)] ; This is kind of like a Levitate code, disable to return to normal. Disable to use Invincible (Rewind) code.
+:FRAME
+@<$F3=1
+[Freeze Timer]
+:FRAME
+@<$1A7=$20
+@<$1A8=$00
+[Have All Doors Open]
+:FRAME
+@<$17B=1
+@<$17C=1
+@<$17D=1
+@<$17E=1
+@<$17F=1
+@<$180=1
+@<$181=1
+@<$182=1
+@<$183=1
+@<$184=1
+@<$185=1
+@<$186=1
+@<$187=1
+@<$188=1
+@<$189=1
+@<$18A=1
+@<$18B=1
+@<$18C=1
+@<$18D=1
+@<$18E=1
+[Have 1st Key]
+:FRAME
+@<$F7=1

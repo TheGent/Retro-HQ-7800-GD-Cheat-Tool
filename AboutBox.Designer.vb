@@ -50,6 +50,7 @@ Partial Class AboutBox
         Me.TextBoxDescription.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TextBoxDescription.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxDescription.Enabled = False
         Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
         Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.TextBoxDescription.Multiline = True
@@ -58,9 +59,6 @@ Partial Class AboutBox
         Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = "Description :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This is a Tool to Parse (Check for errors) in the Retro HQ 7800 " & _
-    "GD 7800GD.CHT File & check for the correct CRC information from an Atari ROM to " & _
-    "be used for the 7800GD.CHT file." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'LabelCompanyName
         '
@@ -84,7 +82,7 @@ Partial Class AboutBox
         Me.LabelCopyright.Name = "LabelCopyright"
         Me.LabelCopyright.Size = New System.Drawing.Size(257, 17)
         Me.LabelCopyright.TabIndex = 0
-        Me.LabelCopyright.Text = "Copyright © 2024"
+        Me.LabelCopyright.Text = "Copyright © Gent / Icepir8 2024"
         Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelVersion

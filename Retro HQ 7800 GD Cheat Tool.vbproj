@@ -82,6 +82,32 @@
     <Compile Include="AboutBox.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CheatManage.Designer.vb">
+      <DependentUpon>CheatManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheatManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatEdit.Designer.vb">
+      <DependentUpon>CheatEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheatEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatParse2.Designer.vb">
+      <DependentUpon>CheatParse2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheatParse2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatParse.Designer.vb">
+      <DependentUpon>CheatParse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheatParse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatParseClass1.vb" />
+    <Compile Include="CRC.vb" />
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -91,6 +117,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
@@ -103,10 +130,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RomInfo.Designer.vb">
+      <DependentUpon>RomInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RomInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheatManage.resx">
+      <DependentUpon>CheatManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheatEdit.resx">
+      <DependentUpon>CheatEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheatParse2.resx">
+      <DependentUpon>CheatParse2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheatParse.resx">
+      <DependentUpon>CheatParse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -116,6 +161,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomInfo.resx">
+      <DependentUpon>RomInfo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -131,11 +179,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Resources\crc.Bat" />
-    <None Include="Resources\parse.Bat" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\7800GDCheat.exe" />
+    <Content Include="Resources\exit2.png" />
+    <Content Include="Resources\info.ico" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\settings.png" />
     <None Include="Resources\Github_Logo.png" />
     <None Include="Resources\About_Logo.png" />
     <None Include="Resources\RetroHQ_Logo_About.png" />

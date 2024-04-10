@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Retro HQ 7800 GD Cheat Tool")> 
-<Assembly: AssemblyDescription("This is a Tool to Parse (Check for errors) in the Retro HQ 7800 GD 7800GD.CHT File & check for the correct CRC information from an Atari ROM to be used for the 7800GD.CHT file.")> 
-<Assembly: AssemblyCompany("Gent's Retro HQ 7800 GD Cheat Tool GitHub")> 
-<Assembly: AssemblyProduct("Retro HQ 7800 GD Cheat Tool")> 
-<Assembly: AssemblyCopyright("© Gent / Retro HQ 2024")> 
+<Assembly: AssemblyTitle("Retro HQ 7800 GD Cheat Tool")>
+<Assembly: AssemblyDescription("This is a Tool to Parse (Check for errors) in the Retro HQ 7800 GD 7800GD.CHT File. It can also check & display the CRC and Name from an Atari ROM and allow you to insert that into the Cheat Management dialog. It can also load & edit the file as well as add new cheats to the 7800GD.CHT file. All in all, it is a very robust and easy to use application for use with your Atari 7800GD!")>
+<Assembly: AssemblyCompany("Retro HQ 7800 GD Cheat Tool GitHub")>
+<Assembly: AssemblyProduct("Retro HQ 7800 GD Cheat Tool")>
+<Assembly: AssemblyCopyright("Copyright © Gent / Icepir8 2024")>
 <Assembly: AssemblyTrademark("Retro HQ 7800 GD Cheat Tool GitHub")> 
 
 <Assembly: ComVisible(False)>

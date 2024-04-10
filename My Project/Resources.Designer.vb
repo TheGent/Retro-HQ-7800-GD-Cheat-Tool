@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -61,16 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property _7800GDCheat() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("_7800GDCheat", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property About_Logo() As System.Drawing.Bitmap
@@ -81,12 +71,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to start cmd /k %this_dir% 7800GDCheat.exe crc &quot;ROM.a78&quot;
-        '''exit.
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property crc() As String
+        Friend ReadOnly Property exit2() As System.Drawing.Bitmap
             Get
-                Return ResourceManager.GetString("crc", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("exit2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
@@ -101,12 +91,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to start cmd /k %this_dir% 7800GDCheat.exe parse &quot;7800GD.CHT&quot;
-        '''exit.
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property parse() As String
+        Friend ReadOnly Property info() As System.Drawing.Bitmap
             Get
-                Return ResourceManager.GetString("parse", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("info", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property info1() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("info1", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         
@@ -126,6 +126,16 @@ Namespace My.Resources
         Friend ReadOnly Property rhq_icon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rhq_icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property settings() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("settings", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
