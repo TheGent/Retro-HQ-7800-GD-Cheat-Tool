@@ -22,13 +22,16 @@ Partial Class CheatEdit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatEdit))
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.LineNoRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -40,7 +43,7 @@ Partial Class CheatEdit
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 391)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(464, 50)
+        Me.Panel2.Size = New System.Drawing.Size(597, 50)
         Me.Panel2.TabIndex = 2
         '
         'Panel1
@@ -48,7 +51,7 @@ Partial Class CheatEdit
         Me.Panel1.Controls.Add(Me.Save_Button)
         Me.Panel1.Controls.Add(Me.Close_Button)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(3, 0)
+        Me.Panel1.Location = New System.Drawing.Point(136, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(457, 46)
         Me.Panel1.TabIndex = 2
@@ -79,20 +82,39 @@ Partial Class CheatEdit
         '
         Me.ReportRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ReportRichTextBox.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ReportRichTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.ReportRichTextBox.Location = New System.Drawing.Point(59, 0)
         Me.ReportRichTextBox.Name = "ReportRichTextBox"
-        Me.ReportRichTextBox.Size = New System.Drawing.Size(464, 391)
-        Me.ReportRichTextBox.TabIndex = 1
+        Me.ReportRichTextBox.Size = New System.Drawing.Size(538, 391)
+        Me.ReportRichTextBox.TabIndex = 25
         Me.ReportRichTextBox.Text = ""
+        Me.ReportRichTextBox.WordWrap = False
+        '
+        'LineNoRichTextBox
+        '
+        Me.LineNoRichTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.LineNoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LineNoRichTextBox.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LineNoRichTextBox.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LineNoRichTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.LineNoRichTextBox.Name = "LineNoRichTextBox"
+        Me.LineNoRichTextBox.ReadOnly = True
+        Me.LineNoRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.LineNoRichTextBox.Size = New System.Drawing.Size(59, 391)
+        Me.LineNoRichTextBox.TabIndex = 26
+        Me.LineNoRichTextBox.Text = ""
+        Me.LineNoRichTextBox.WordWrap = False
+        Me.ToolTip1.SetToolTip(Me.LineNoRichTextBox, "Press Ctrl G to go to a line.")
         '
         'CheatEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(464, 441)
+        Me.ClientSize = New System.Drawing.Size(597, 441)
         Me.Controls.Add(Me.ReportRichTextBox)
+        Me.Controls.Add(Me.LineNoRichTextBox)
         Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MinimumSize = New System.Drawing.Size(420, 320)
         Me.Name = "CheatEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -110,4 +132,6 @@ Partial Class CheatEdit
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Save_Button As Button
     Friend WithEvents ReportRichTextBox As RichTextBox
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents LineNoRichTextBox As RichTextBox
 End Class

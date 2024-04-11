@@ -212,7 +212,7 @@ MessageBoxIcon.Information)
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Dim lineNo(TextBox1.Lines.Length()) As String
         For I = 1 To lineNo.Length - 1
-            lineNo(I - 1) = I.ToString()
+            lineNo(I - 1) = I.ToString().PadLeft(5)
         Next I
 
         RichTextBox1.Lines = lineNo

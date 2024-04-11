@@ -106,9 +106,10 @@ Partial Class CheatManage
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(43, 32)
+        Me.TextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(60, 32)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(354, 333)
+        Me.TextBox1.Size = New System.Drawing.Size(337, 333)
         Me.TextBox1.TabIndex = 22
         Me.TextBox1.Text = ""
         Me.TextBox1.WordWrap = False
@@ -160,11 +161,15 @@ Partial Class CheatManage
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(58, 333)
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox1.Size = New System.Drawing.Size(52, 333)
         Me.RichTextBox1.TabIndex = 23
         Me.RichTextBox1.Text = ""
+        Me.ToolTip1.SetToolTip(Me.RichTextBox1, "Press Ctrl G to go to a line.")
         Me.RichTextBox1.WordWrap = False
         '
         'GroupBox1
