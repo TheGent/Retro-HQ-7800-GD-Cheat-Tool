@@ -25,8 +25,18 @@ Partial Class CheatManage
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatManage))
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Save_Button = New System.Windows.Forms.Button()
+        Me.ClearText = New System.Windows.Forms.Button()
+        Me.Open_Button = New System.Windows.Forms.Button()
+        Me.Close_Button = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SUBMIT_BTN = New System.Windows.Forms.Button()
@@ -39,21 +49,41 @@ Partial Class CheatManage
         Me.CheatName_TextBox = New System.Windows.Forms.TextBox()
         Me.GameName_TextBox = New System.Windows.Forms.TextBox()
         Me.CRC_TextBox = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Save_Button = New System.Windows.Forms.Button()
-        Me.ClearText = New System.Windows.Forms.Button()
-        Me.Open_Button = New System.Windows.Forms.Button()
-        Me.Close_Button = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(93, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(85, 41)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Insert CRC and Name"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Insert Game CRC & Name into the Text Boxes")
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(13, 296)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(100, 13)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "Add Cheat Code 3?"
+        Me.ToolTip1.SetToolTip(Me.Label6, "This is for a cheat entry with a third address and value")
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(5, 245)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(100, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Add Cheat Code 2?"
+        Me.ToolTip1.SetToolTip(Me.Label5, "This is for a cheat entry with a second address and value")
         '
         'OpenFileDialog1
         '
@@ -73,6 +103,69 @@ Partial Class CheatManage
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 398)
         Me.Panel1.TabIndex = 14
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(43, 32)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(354, 333)
+        Me.TextBox1.TabIndex = 22
+        Me.TextBox1.Text = ""
+        Me.TextBox1.WordWrap = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(203, 5)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(170, 23)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Parse  7800GD.CHT "
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Save_Button
+        '
+        Me.Save_Button.Location = New System.Drawing.Point(4, 371)
+        Me.Save_Button.Name = "Save_Button"
+        Me.Save_Button.Size = New System.Drawing.Size(127, 23)
+        Me.Save_Button.TabIndex = 17
+        Me.Save_Button.Text = "Save"
+        Me.Save_Button.UseVisualStyleBackColor = True
+        '
+        'ClearText
+        '
+        Me.ClearText.Location = New System.Drawing.Point(137, 371)
+        Me.ClearText.Name = "ClearText"
+        Me.ClearText.Size = New System.Drawing.Size(127, 23)
+        Me.ClearText.TabIndex = 18
+        Me.ClearText.Text = "Clear"
+        Me.ClearText.UseVisualStyleBackColor = True
+        '
+        'Open_Button
+        '
+        Me.Open_Button.Location = New System.Drawing.Point(27, 5)
+        Me.Open_Button.Name = "Open_Button"
+        Me.Open_Button.Size = New System.Drawing.Size(170, 23)
+        Me.Open_Button.TabIndex = 20
+        Me.Open_Button.Text = "Open  7800GD.CHT "
+        Me.Open_Button.UseVisualStyleBackColor = True
+        '
+        'Close_Button
+        '
+        Me.Close_Button.Location = New System.Drawing.Point(270, 371)
+        Me.Close_Button.Name = "Close_Button"
+        Me.Close_Button.Size = New System.Drawing.Size(127, 23)
+        Me.Close_Button.TabIndex = 19
+        Me.Close_Button.Text = "Close"
+        Me.Close_Button.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(58, 333)
+        Me.RichTextBox1.TabIndex = 23
+        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.WordWrap = False
         '
         'GroupBox1
         '
@@ -181,16 +274,6 @@ Partial Class CheatManage
         Me.CRC_TextBox.Size = New System.Drawing.Size(174, 20)
         Me.CRC_TextBox.TabIndex = 22
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(93, 19)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(85, 41)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Insert CRC and Name"
-        Me.ToolTip1.SetToolTip(Me.Button2, "Insert Game CRC & Name into the Text Boxes")
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -208,89 +291,6 @@ Partial Class CheatManage
         Me.Label2.Size = New System.Drawing.Size(88, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Add Game Name"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 296)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 13)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Add Cheat Code 3?"
-        Me.ToolTip1.SetToolTip(Me.Label6, "This is for a cheat entry with a third address and value")
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(5, 245)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 13)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Add Cheat Code 2?"
-        Me.ToolTip1.SetToolTip(Me.Label5, "This is for a cheat entry with a second address and value")
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(43, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(354, 333)
-        Me.TextBox1.TabIndex = 22
-        Me.TextBox1.Text = ""
-        Me.TextBox1.WordWrap = False
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(203, 5)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(170, 23)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Parse  7800GD.CHT "
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Save_Button
-        '
-        Me.Save_Button.Location = New System.Drawing.Point(4, 371)
-        Me.Save_Button.Name = "Save_Button"
-        Me.Save_Button.Size = New System.Drawing.Size(127, 23)
-        Me.Save_Button.TabIndex = 17
-        Me.Save_Button.Text = "Save"
-        Me.Save_Button.UseVisualStyleBackColor = True
-        '
-        'ClearText
-        '
-        Me.ClearText.Location = New System.Drawing.Point(137, 371)
-        Me.ClearText.Name = "ClearText"
-        Me.ClearText.Size = New System.Drawing.Size(127, 23)
-        Me.ClearText.TabIndex = 18
-        Me.ClearText.Text = "Clear"
-        Me.ClearText.UseVisualStyleBackColor = True
-        '
-        'Open_Button
-        '
-        Me.Open_Button.Location = New System.Drawing.Point(27, 5)
-        Me.Open_Button.Name = "Open_Button"
-        Me.Open_Button.Size = New System.Drawing.Size(170, 23)
-        Me.Open_Button.TabIndex = 20
-        Me.Open_Button.Text = "Open  7800GD.CHT "
-        Me.Open_Button.UseVisualStyleBackColor = True
-        '
-        'Close_Button
-        '
-        Me.Close_Button.Location = New System.Drawing.Point(270, 371)
-        Me.Close_Button.Name = "Close_Button"
-        Me.Close_Button.Size = New System.Drawing.Size(127, 23)
-        Me.Close_Button.TabIndex = 19
-        Me.Close_Button.Text = "Close"
-        Me.Close_Button.UseVisualStyleBackColor = True
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(58, 333)
-        Me.RichTextBox1.TabIndex = 23
-        Me.RichTextBox1.Text = ""
-        Me.RichTextBox1.WordWrap = False
         '
         'CheatManage
         '

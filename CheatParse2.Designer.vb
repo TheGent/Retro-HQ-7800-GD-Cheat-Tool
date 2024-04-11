@@ -25,7 +25,8 @@ Partial Class CheatParse2
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatParse2))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Save_Button = New System.Windows.Forms.Button()
+        Me.Refresh_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
         Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -45,7 +46,8 @@ Partial Class CheatParse2
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Save_Button)
+        Me.Panel1.Controls.Add(Me.Refresh_Button)
         Me.Panel1.Controls.Add(Me.Close_Button)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel1.Location = New System.Drawing.Point(-57, 0)
@@ -53,14 +55,23 @@ Partial Class CheatParse2
         Me.Panel1.Size = New System.Drawing.Size(457, 46)
         Me.Panel1.TabIndex = 2
         '
-        'Button2
+        'Save_Button
         '
-        Me.Button2.Location = New System.Drawing.Point(239, 13)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 23)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Parse Refresh"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Save_Button.Location = New System.Drawing.Point(231, 13)
+        Me.Save_Button.Name = "Save_Button"
+        Me.Save_Button.Size = New System.Drawing.Size(110, 23)
+        Me.Save_Button.TabIndex = 17
+        Me.Save_Button.Text = "Save File"
+        Me.Save_Button.UseVisualStyleBackColor = True
+        '
+        'Refresh_Button
+        '
+        Me.Refresh_Button.Location = New System.Drawing.Point(125, 13)
+        Me.Refresh_Button.Name = "Refresh_Button"
+        Me.Refresh_Button.Size = New System.Drawing.Size(100, 23)
+        Me.Refresh_Button.TabIndex = 17
+        Me.Refresh_Button.Text = "Parse Refresh"
+        Me.Refresh_Button.UseVisualStyleBackColor = True
         '
         'Close_Button
         '
@@ -108,6 +119,7 @@ Partial Class CheatParse2
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Close_Button As Button
     Friend WithEvents ReportRichTextBox As RichTextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Refresh_Button As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Save_Button As Button
 End Class

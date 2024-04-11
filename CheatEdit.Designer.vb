@@ -27,8 +27,8 @@ Partial Class CheatEdit
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
-        Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -71,6 +71,10 @@ Partial Class CheatEdit
         Me.Close_Button.Text = "Close"
         Me.Close_Button.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'ReportRichTextBox
         '
         Me.ReportRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill
@@ -78,12 +82,8 @@ Partial Class CheatEdit
         Me.ReportRichTextBox.Location = New System.Drawing.Point(0, 0)
         Me.ReportRichTextBox.Name = "ReportRichTextBox"
         Me.ReportRichTextBox.Size = New System.Drawing.Size(464, 391)
-        Me.ReportRichTextBox.TabIndex = 3
+        Me.ReportRichTextBox.TabIndex = 1
         Me.ReportRichTextBox.Text = ""
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'CheatEdit
         '
@@ -107,7 +107,7 @@ Partial Class CheatEdit
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Close_Button As Button
-    Friend WithEvents ReportRichTextBox As RichTextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Save_Button As Button
+    Friend WithEvents ReportRichTextBox As RichTextBox
 End Class

@@ -15,9 +15,9 @@
                 Dim data As String = SR.ReadToEnd
                 SR.Close()
                 CheatEdit.ReportRichTextBox.Text = data
+                CheatEdit.Show()
             End If
         End With
-        CheatEdit.Show()
     End Sub
 
     Private Sub CheatParse_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -23,24 +23,24 @@
         ReportRichTextBox.Text = CheatParseClass.ParseCheatFile("7800GD.CHT")
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Refresh_Button_Click(sender As Object, e As EventArgs) Handles Refresh_Button.Click
         ReportRichTextBox.Text = CheatParseClass.ParseCheatFile("7800GD.CHT")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub CheatParse2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        'CheatEdit.Close()
+        'Main.Show()
+    End Sub
+
+    Private Sub Save_Button_Click(sender As Object, e As EventArgs) Handles Save_Button.Click
         Dim iSave As New SaveFileDialog
-        iSave.Filter = "Atari 7800 GD CHT | *.cht"
+        iSave.Filter = "Parse Information Text |*.txt "
         iSave.FilterIndex = 2
         iSave.RestoreDirectory = False
 
         If iSave.ShowDialog() = Windows.Forms.DialogResult.OK Then
             IO.File.WriteAllText(iSave.FileName, ReportRichTextBox.Text)
         End If
-    End Sub
-
-    Private Sub CheatParse2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'CheatEdit.Close()
-        'Main.Show()
     End Sub
 End Class
 
