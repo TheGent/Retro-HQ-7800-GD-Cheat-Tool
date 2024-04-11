@@ -18,7 +18,7 @@ Public Class CheatManage
     Dim Value2Plus As String = "$"      ' This is the $ insert before more than 2 values for the Value input
     Dim V2PNo As String = Nothing       ' No $ for the next line after the Name note
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) 
         With OpenFileDialog1
             .FileName = ""
             .Filter = "Atari 7800 GD Rom | *.a78"
@@ -29,7 +29,7 @@ Public Class CheatManage
         End With
     End Sub
 
-    Private Sub Open_Button_Click(sender As System.Object, e As System.EventArgs) Handles Open_Button.Click
+    Private Sub Open_Button_Click(sender As System.Object, e As System.EventArgs) 
         With OpenFileDialog1
             .FileName = ""
             .Filter = "Atari 7800 GD CHT | *.cht"
@@ -43,13 +43,11 @@ Public Class CheatManage
         End With
     End Sub
 
-    Private Sub Close_Button_Click(sender As System.Object, e As System.EventArgs) Handles Close_Button.Click
+    Private Sub Close_Button_Click(sender As System.Object, e As System.EventArgs) 
         Close()
-        CheatParse2.Close()
-        Main.Show()
     End Sub
 
-    Private Sub ClearText_Click(sender As System.Object, e As System.EventArgs) Handles ClearText.Click
+    Private Sub ClearText_Click(sender As System.Object, e As System.EventArgs) 
         TextBox1.Text = Nothing
         Address_2.Enabled = True
         Value_2.Enabled = True
@@ -57,7 +55,7 @@ Public Class CheatManage
         Value_3.Enabled = True
     End Sub
 
-    Private Sub Save_Button_Click(sender As System.Object, e As System.EventArgs) Handles Save_Button.Click
+    Private Sub Save_Button_Click(sender As System.Object, e As System.EventArgs) 
         Dim iSave As New SaveFileDialog
         iSave.Filter = "Atari 7800 GD CHT | *.cht"
         iSave.FilterIndex = 2
@@ -68,7 +66,7 @@ Public Class CheatManage
         End If
     End Sub
 
-    Private Sub SUBMIT_BTN_Click(sender As System.Object, e As System.EventArgs) Handles SUBMIT_BTN.Click
+    Private Sub SUBMIT_BTN_Click(sender As System.Object, e As System.EventArgs)
         TextBox1.AppendText(vbNewLine)
         If CRC_TextBox.Text = "" Then
             TextBox1.AppendText(CRCNo + "")
@@ -152,7 +150,7 @@ Public Class CheatManage
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         CRC_TextBox.Text = ""
         GameName_TextBox.Text = ""
         CheatName_TextBox.Text = ""
@@ -168,7 +166,28 @@ MessageBoxIcon.Information)
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) 
         CheatParse2.Show()
+    End Sub
+
+    Private Sub CheatManage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        CheatParse2.Close()
+        Main.Show()
+    End Sub
+
+    Private Sub CheatManage_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        If e.KeyChar = Chr(7) Then
+            Dim maxLine As Integer = TextBox1.Lines.Length
+            Dim curLine As Integer = 0 ' TextBox1.s
+            Dim GotoLine As Integer = Convert.ToInt32(InputBox("1 - " & maxLine, "Goto Line?", curLine))
+
+            TextBox1.SelectionStart = TextBox1.Find(TextBox1.Lines(GotoLine))
+            TextBox1.ScrollToCaret()
+
+        End If
+    End Sub
+
+    Private Sub CheatManage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        CRC_TextBox.Select()
     End Sub
 End Class

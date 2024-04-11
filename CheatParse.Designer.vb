@@ -102,6 +102,7 @@ Partial Class CheatParse
         Me.ReportRichTextBox.Size = New System.Drawing.Size(464, 291)
         Me.ReportRichTextBox.TabIndex = 3
         Me.ReportRichTextBox.Text = ""
+        Me.ReportRichTextBox.WordWrap = False
         '
         'OpenFileDialog1
         '

@@ -37,6 +37,11 @@
             IO.File.WriteAllText(iSave.FileName, ReportRichTextBox.Text)
         End If
     End Sub
+
+    Private Sub CheatParse2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        'CheatEdit.Close()
+        'Main.Show()
+    End Sub
 End Class
 
 

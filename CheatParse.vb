@@ -3,8 +3,6 @@
     Dim CheatParseClass As New CheatParseClass()
     Private Sub Close_Button_Click(sender As Object, e As EventArgs) Handles Close_Button.Click
         Close()
-        CheatEdit.Close()
-        Main.Show()
     End Sub
 
     Private Sub Open_Button_Click(sender As Object, e As EventArgs) Handles Open_Button.Click
@@ -38,6 +36,11 @@
         If iSave.ShowDialog() = Windows.Forms.DialogResult.OK Then
             IO.File.WriteAllText(iSave.FileName, ReportRichTextBox.Text)
         End If
+    End Sub
+
+    Private Sub CheatParse_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        CheatEdit.Close()
+        Main.Show()
     End Sub
 End Class
 
