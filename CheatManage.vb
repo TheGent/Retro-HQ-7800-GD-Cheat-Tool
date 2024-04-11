@@ -18,7 +18,18 @@ Public Class CheatManage
     Dim Value2Plus As String = "$"      ' This is the $ insert before more than 2 values for the Value input
     Dim V2PNo As String = Nothing       ' No $ for the next line after the Name note
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) 
+    Private Declare Auto Function RtfScroll _
+                Lib "user32.dll" Alias "SendMessage" (
+                ByVal hWnd As IntPtr,
+                ByVal Msg As Integer,
+                ByVal wParam As IntPtr,
+                ByRef lParam As System.Drawing.Point) As Integer
+
+    Private Const WM_USER = &H400
+    Private Const EM_GETSCROLLPOS = WM_USER + 221
+    Private Const EM_SETSCROLLPOS = WM_USER + 222
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         With OpenFileDialog1
             .FileName = ""
             .Filter = "Atari 7800 GD Rom | *.a78"
@@ -29,7 +40,7 @@ Public Class CheatManage
         End With
     End Sub
 
-    Private Sub Open_Button_Click(sender As System.Object, e As System.EventArgs) 
+    Private Sub Open_Button_Click(sender As System.Object, e As System.EventArgs) Handles Open_Button.Click
         With OpenFileDialog1
             .FileName = ""
             .Filter = "Atari 7800 GD CHT | *.cht"
@@ -39,15 +50,16 @@ Public Class CheatManage
                 Dim data As String = SR.ReadToEnd
                 SR.Close()
                 TextBox1.Text = data
+
             End If
         End With
     End Sub
 
-    Private Sub Close_Button_Click(sender As System.Object, e As System.EventArgs) 
+    Private Sub Close_Button_Click(sender As System.Object, e As System.EventArgs) Handles Close_Button.Click
         Close()
     End Sub
 
-    Private Sub ClearText_Click(sender As System.Object, e As System.EventArgs) 
+    Private Sub ClearText_Click(sender As System.Object, e As System.EventArgs) Handles ClearText.Click
         TextBox1.Text = Nothing
         Address_2.Enabled = True
         Value_2.Enabled = True
@@ -55,7 +67,7 @@ Public Class CheatManage
         Value_3.Enabled = True
     End Sub
 
-    Private Sub Save_Button_Click(sender As System.Object, e As System.EventArgs) 
+    Private Sub Save_Button_Click(sender As System.Object, e As System.EventArgs) Handles Save_Button.Click
         Dim iSave As New SaveFileDialog
         iSave.Filter = "Atari 7800 GD CHT | *.cht"
         iSave.FilterIndex = 2
@@ -66,7 +78,7 @@ Public Class CheatManage
         End If
     End Sub
 
-    Private Sub SUBMIT_BTN_Click(sender As System.Object, e As System.EventArgs)
+    Private Sub SUBMIT_BTN_Click(sender As System.Object, e As System.EventArgs) Handles SUBMIT_BTN.Click
         TextBox1.AppendText(vbNewLine)
         If CRC_TextBox.Text = "" Then
             TextBox1.AppendText(CRCNo + "")
@@ -150,7 +162,7 @@ Public Class CheatManage
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         CRC_TextBox.Text = ""
         GameName_TextBox.Text = ""
         CheatName_TextBox.Text = ""
@@ -166,7 +178,7 @@ MessageBoxIcon.Information)
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         CheatParse2.Show()
     End Sub
 
@@ -178,16 +190,38 @@ MessageBoxIcon.Information)
     Private Sub CheatManage_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = Chr(7) Then
             Dim maxLine As Integer = TextBox1.Lines.Length
-            Dim curLine As Integer = 0 ' TextBox1.s
-            Dim GotoLine As Integer = Convert.ToInt32(InputBox("1 - " & maxLine, "Goto Line?", curLine))
+            If maxLine = 0 Then Return
+            Dim GotoLine As Integer = Convert.ToInt32(InputBox("1 - " & maxLine, "Goto Line?", 0))
+            If GotoLine < 1 Or GotoLine > maxLine Then
+                MessageBox.Show(Me, "Select line from 1 to " & maxLine, "Go to line", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return
+            End If
 
-            TextBox1.SelectionStart = TextBox1.Find(TextBox1.Lines(GotoLine))
-            TextBox1.ScrollToCaret()
-
+            RichTextBox1.SelectionStart = RichTextBox1.Find(GotoLine.ToString())
+            RichTextBox1.ScrollToCaret()
+            Dim pt As New System.Drawing.Point()
+            RtfScroll(RichTextBox1.Handle, EM_GETSCROLLPOS, 0, pt)
+            RtfScroll(TextBox1.Handle, EM_SETSCROLLPOS, 0, pt)
         End If
     End Sub
 
     Private Sub CheatManage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         CRC_TextBox.Select()
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Dim lineNo(TextBox1.Lines.Length()) As String
+        For I = 1 To lineNo.Length - 1
+            lineNo(I - 1) = I.ToString()
+        Next I
+
+        RichTextBox1.Lines = lineNo
+
+    End Sub
+
+    Private Sub TextBox1_VScroll(sender As Object, e As EventArgs) Handles TextBox1.VScroll
+        Dim pt As New System.Drawing.Point()
+        RtfScroll(TextBox1.Handle, EM_GETSCROLLPOS, 0, pt)
+        RtfScroll(RichTextBox1.Handle, EM_SETSCROLLPOS, 0, pt)
     End Sub
 End Class

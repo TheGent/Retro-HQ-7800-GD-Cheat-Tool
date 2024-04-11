@@ -50,6 +50,7 @@ Partial Class CheatManage
         Me.ClearText = New System.Windows.Forms.Button()
         Me.Open_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -67,6 +68,7 @@ Partial Class CheatManage
         Me.Panel1.Controls.Add(Me.ClearText)
         Me.Panel1.Controls.Add(Me.Open_Button)
         Me.Panel1.Controls.Add(Me.Close_Button)
+        Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Location = New System.Drawing.Point(209, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 398)
@@ -229,9 +231,9 @@ Partial Class CheatManage
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(4, 32)
+        Me.TextBox1.Location = New System.Drawing.Point(43, 32)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(393, 333)
+        Me.TextBox1.Size = New System.Drawing.Size(354, 333)
         Me.TextBox1.TabIndex = 22
         Me.TextBox1.Text = ""
         Me.TextBox1.WordWrap = False
@@ -281,6 +283,15 @@ Partial Class CheatManage
         Me.Close_Button.Text = "Close"
         Me.Close_Button.UseVisualStyleBackColor = True
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(58, 333)
+        Me.RichTextBox1.TabIndex = 23
+        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.WordWrap = False
+        '
         'CheatManage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -328,4 +339,5 @@ Partial Class CheatManage
     Friend WithEvents Label2 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
