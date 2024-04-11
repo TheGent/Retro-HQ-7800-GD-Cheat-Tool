@@ -22,6 +22,7 @@ Partial Class CheatParse2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatParse2))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -30,6 +31,7 @@ Partial Class CheatParse2
         Me.Close_Button = New System.Windows.Forms.Button()
         Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -39,9 +41,9 @@ Partial Class CheatParse2
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 231)
+        Me.Panel2.Location = New System.Drawing.Point(0, 291)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(404, 50)
+        Me.Panel2.Size = New System.Drawing.Size(464, 50)
         Me.Panel2.TabIndex = 2
         '
         'Panel1
@@ -50,7 +52,7 @@ Partial Class CheatParse2
         Me.Panel1.Controls.Add(Me.Refresh_Button)
         Me.Panel1.Controls.Add(Me.Close_Button)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(-57, 0)
+        Me.Panel1.Location = New System.Drawing.Point(3, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(457, 46)
         Me.Panel1.TabIndex = 2
@@ -62,6 +64,7 @@ Partial Class CheatParse2
         Me.Save_Button.Size = New System.Drawing.Size(110, 23)
         Me.Save_Button.TabIndex = 17
         Me.Save_Button.Text = "Save File"
+        Me.ToolTip1.SetToolTip(Me.Save_Button, "This allows you to save the parse information to a text file if you so wish.")
         Me.Save_Button.UseVisualStyleBackColor = True
         '
         'Refresh_Button
@@ -71,6 +74,8 @@ Partial Class CheatParse2
         Me.Refresh_Button.Size = New System.Drawing.Size(100, 23)
         Me.Refresh_Button.TabIndex = 17
         Me.Refresh_Button.Text = "Parse Refresh"
+        Me.ToolTip1.SetToolTip(Me.Refresh_Button, "This will refresh the parse information. Handy if you previously had an error and" &
+        " fixed it via cheat edit!")
         Me.Refresh_Button.UseVisualStyleBackColor = True
         '
         'Close_Button
@@ -88,7 +93,7 @@ Partial Class CheatParse2
         Me.ReportRichTextBox.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportRichTextBox.Location = New System.Drawing.Point(0, 0)
         Me.ReportRichTextBox.Name = "ReportRichTextBox"
-        Me.ReportRichTextBox.Size = New System.Drawing.Size(404, 231)
+        Me.ReportRichTextBox.Size = New System.Drawing.Size(464, 291)
         Me.ReportRichTextBox.TabIndex = 3
         Me.ReportRichTextBox.Text = ""
         '
@@ -100,7 +105,7 @@ Partial Class CheatParse2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(404, 281)
+        Me.ClientSize = New System.Drawing.Size(464, 341)
         Me.Controls.Add(Me.ReportRichTextBox)
         Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -122,4 +127,5 @@ Partial Class CheatParse2
     Friend WithEvents Refresh_Button As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Save_Button As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

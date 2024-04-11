@@ -25,16 +25,32 @@ Partial Class CheatEdit
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatEdit))
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.LineNoRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
-        Me.LineNoRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'LineNoRichTextBox
+        '
+        Me.LineNoRichTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.LineNoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LineNoRichTextBox.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LineNoRichTextBox.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LineNoRichTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.LineNoRichTextBox.Name = "LineNoRichTextBox"
+        Me.LineNoRichTextBox.ReadOnly = True
+        Me.LineNoRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.LineNoRichTextBox.Size = New System.Drawing.Size(59, 391)
+        Me.LineNoRichTextBox.TabIndex = 26
+        Me.LineNoRichTextBox.Text = ""
+        Me.ToolTip1.SetToolTip(Me.LineNoRichTextBox, "Press Ctrl +G to go to an address  line.")
+        Me.LineNoRichTextBox.WordWrap = False
         '
         'Panel2
         '
@@ -63,6 +79,8 @@ Partial Class CheatEdit
         Me.Save_Button.Size = New System.Drawing.Size(110, 23)
         Me.Save_Button.TabIndex = 18
         Me.Save_Button.Text = "Save File"
+        Me.ToolTip1.SetToolTip(Me.Save_Button, "This will allow you to load and edit your 7800GD.cht file.. Handy if yoiu previou" &
+        "sly had an error and need to fixed it!")
         Me.Save_Button.UseVisualStyleBackColor = True
         '
         'Close_Button
@@ -89,22 +107,6 @@ Partial Class CheatEdit
         Me.ReportRichTextBox.Text = ""
         Me.ReportRichTextBox.WordWrap = False
         '
-        'LineNoRichTextBox
-        '
-        Me.LineNoRichTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.LineNoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LineNoRichTextBox.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LineNoRichTextBox.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LineNoRichTextBox.Location = New System.Drawing.Point(0, 0)
-        Me.LineNoRichTextBox.Name = "LineNoRichTextBox"
-        Me.LineNoRichTextBox.ReadOnly = True
-        Me.LineNoRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.LineNoRichTextBox.Size = New System.Drawing.Size(59, 391)
-        Me.LineNoRichTextBox.TabIndex = 26
-        Me.LineNoRichTextBox.Text = ""
-        Me.LineNoRichTextBox.WordWrap = False
-        Me.ToolTip1.SetToolTip(Me.LineNoRichTextBox, "Press Ctrl G to go to a line.")
-        '
         'CheatEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -118,7 +120,7 @@ Partial Class CheatEdit
         Me.MinimumSize = New System.Drawing.Size(420, 320)
         Me.Name = "CheatEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "7800GD.CHT Edit"
+        Me.Text = "7800GD.CHT Edit."
         Me.TopMost = True
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

@@ -22,6 +22,7 @@ Partial Class CheatParse
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatParse))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -31,6 +32,7 @@ Partial Class CheatParse
         Me.Close_Button = New System.Windows.Forms.Button()
         Me.ReportRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -64,6 +66,8 @@ Partial Class CheatParse
         Me.Refresh_Button.Size = New System.Drawing.Size(100, 23)
         Me.Refresh_Button.TabIndex = 17
         Me.Refresh_Button.Text = "Parse Refresh"
+        Me.ToolTip1.SetToolTip(Me.Refresh_Button, "This will refresh the parse information. Handy if yoiu previously had an error an" &
+        "d fixed it via cheat edit!")
         Me.Refresh_Button.UseVisualStyleBackColor = True
         '
         'Save_Button
@@ -73,6 +77,7 @@ Partial Class CheatParse
         Me.Save_Button.Size = New System.Drawing.Size(110, 23)
         Me.Save_Button.TabIndex = 16
         Me.Save_Button.Text = "Save File"
+        Me.ToolTip1.SetToolTip(Me.Save_Button, "This allows you to save the parse information to a text file if you so wish.")
         Me.Save_Button.UseVisualStyleBackColor = True
         '
         'Open_Button
@@ -82,6 +87,8 @@ Partial Class CheatParse
         Me.Open_Button.Size = New System.Drawing.Size(110, 23)
         Me.Open_Button.TabIndex = 15
         Me.Open_Button.Text = "Edit 7800GD.CHT "
+        Me.ToolTip1.SetToolTip(Me.Open_Button, "This will allow you to load and edit your 7800GD.cht file.. Handy if you previous" &
+        "ly had an error and need to fixed it!")
         Me.Open_Button.UseVisualStyleBackColor = True
         '
         'Close_Button
@@ -108,6 +115,11 @@ Partial Class CheatParse
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipTitle = "This will refresh the parse information. Handy if yoiu previously had an error an" &
+    "d fixed it via Cheat edit!"
+        '
         'CheatParse
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -120,6 +132,7 @@ Partial Class CheatParse
         Me.Name = "CheatParse"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "7800GD.CHT Parse"
+        Me.ToolTip1.SetToolTip(Me, ". Clear and use this field for the next cheat if you have one.")
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -134,4 +147,5 @@ Partial Class CheatParse
     Friend WithEvents Refresh_Button As Button
     Friend WithEvents Save_Button As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

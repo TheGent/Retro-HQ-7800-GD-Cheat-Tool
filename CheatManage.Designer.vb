@@ -28,6 +28,7 @@ Partial Class CheatManage
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.RichTextBox()
@@ -36,7 +37,6 @@ Partial Class CheatManage
         Me.ClearText = New System.Windows.Forms.Button()
         Me.Open_Button = New System.Windows.Forms.Button()
         Me.Close_Button = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SUBMIT_BTN = New System.Windows.Forms.Button()
@@ -51,6 +51,8 @@ Partial Class CheatManage
         Me.CRC_TextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -68,7 +70,7 @@ Partial Class CheatManage
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 296)
+        Me.Label6.Location = New System.Drawing.Point(3, 293)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(100, 13)
         Me.Label6.TabIndex = 18
@@ -78,12 +80,25 @@ Partial Class CheatManage
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(5, 245)
+        Me.Label5.Location = New System.Drawing.Point(4, 243)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 13)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Add Cheat Code 2?"
         Me.ToolTip1.SetToolTip(Me.Label5, "This is for a cheat entry with a second address and value")
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox1.Size = New System.Drawing.Size(52, 333)
+        Me.RichTextBox1.TabIndex = 23
+        Me.RichTextBox1.Text = ""
+        Me.ToolTip1.SetToolTip(Me.RichTextBox1, "Press Ctrl +G to go to an address  line.")
+        Me.RichTextBox1.WordWrap = False
         '
         'OpenFileDialog1
         '
@@ -121,6 +136,8 @@ Partial Class CheatManage
         Me.Button3.Size = New System.Drawing.Size(170, 23)
         Me.Button3.TabIndex = 21
         Me.Button3.Text = "Parse  7800GD.CHT "
+        Me.ToolTip1.SetToolTip(Me.Button3, "This will insert and perform the parse information. Handy if you have added a new" &
+        " cheat or editied the file and wish to check it is correct.")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Save_Button
@@ -130,6 +147,8 @@ Partial Class CheatManage
         Me.Save_Button.Size = New System.Drawing.Size(127, 23)
         Me.Save_Button.TabIndex = 17
         Me.Save_Button.Text = "Save"
+        Me.ToolTip1.SetToolTip(Me.Save_Button, "This will allow you to save your newly added cheats or edited ones to the 7800GD." &
+        "cht file..")
         Me.Save_Button.UseVisualStyleBackColor = True
         '
         'ClearText
@@ -139,6 +158,7 @@ Partial Class CheatManage
         Me.ClearText.Size = New System.Drawing.Size(127, 23)
         Me.ClearText.TabIndex = 18
         Me.ClearText.Text = "Clear"
+        Me.ToolTip1.SetToolTip(Me.ClearText, "This will clear / remove your 7800GD.cht file")
         Me.ClearText.UseVisualStyleBackColor = True
         '
         'Open_Button
@@ -148,6 +168,8 @@ Partial Class CheatManage
         Me.Open_Button.Size = New System.Drawing.Size(170, 23)
         Me.Open_Button.TabIndex = 20
         Me.Open_Button.Text = "Open  7800GD.CHT "
+        Me.ToolTip1.SetToolTip(Me.Open_Button, "This will allow you to load, edit, and use the ability to add new cheats to your " &
+        "7800GD.cht file.")
         Me.Open_Button.UseVisualStyleBackColor = True
         '
         'Close_Button
@@ -159,21 +181,10 @@ Partial Class CheatManage
         Me.Close_Button.Text = "Close"
         Me.Close_Button.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(9, 32)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox1.Size = New System.Drawing.Size(52, 333)
-        Me.RichTextBox1.TabIndex = 23
-        Me.RichTextBox1.Text = ""
-        Me.ToolTip1.SetToolTip(Me.RichTextBox1, "Press Ctrl G to go to a line.")
-        Me.RichTextBox1.WordWrap = False
-        '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.SUBMIT_BTN)
         Me.GroupBox1.Controls.Add(Me.Value_3)
@@ -205,6 +216,7 @@ Partial Class CheatManage
         Me.Button1.Size = New System.Drawing.Size(84, 34)
         Me.Button1.TabIndex = 32
         Me.Button1.Text = "Clear All Fields"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Clear all above fields to become blank once more")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'SUBMIT_BTN
@@ -214,6 +226,7 @@ Partial Class CheatManage
         Me.SUBMIT_BTN.Size = New System.Drawing.Size(84, 34)
         Me.SUBMIT_BTN.TabIndex = 31
         Me.SUBMIT_BTN.Text = "Submit"
+        Me.ToolTip1.SetToolTip(Me.SUBMIT_BTN, "Add new cheat to the 7800GD.cht file")
         Me.SUBMIT_BTN.UseVisualStyleBackColor = True
         '
         'Value_3
@@ -222,6 +235,7 @@ Partial Class CheatManage
         Me.Value_3.Name = "Value_3"
         Me.Value_3.Size = New System.Drawing.Size(84, 20)
         Me.Value_3.TabIndex = 30
+        Me.ToolTip1.SetToolTip(Me.Value_3, "Add your 3rd cheat value here if you have one")
         '
         'Address_3
         '
@@ -229,6 +243,7 @@ Partial Class CheatManage
         Me.Address_3.Name = "Address_3"
         Me.Address_3.Size = New System.Drawing.Size(84, 20)
         Me.Address_3.TabIndex = 29
+        Me.ToolTip1.SetToolTip(Me.Address_3, "Add your 3rd cheat address here if you have one")
         '
         'Value_2
         '
@@ -236,6 +251,7 @@ Partial Class CheatManage
         Me.Value_2.Name = "Value_2"
         Me.Value_2.Size = New System.Drawing.Size(84, 20)
         Me.Value_2.TabIndex = 28
+        Me.ToolTip1.SetToolTip(Me.Value_2, "Add your 2nd cheat value here if you have one")
         '
         'Address_2
         '
@@ -243,6 +259,7 @@ Partial Class CheatManage
         Me.Address_2.Name = "Address_2"
         Me.Address_2.Size = New System.Drawing.Size(84, 20)
         Me.Address_2.TabIndex = 27
+        Me.ToolTip1.SetToolTip(Me.Address_2, "Add your 2nd cheat address here if you have one")
         '
         'Value_1
         '
@@ -250,6 +267,8 @@ Partial Class CheatManage
         Me.Value_1.Name = "Value_1"
         Me.Value_1.Size = New System.Drawing.Size(84, 20)
         Me.Value_1.TabIndex = 26
+        Me.ToolTip1.SetToolTip(Me.Value_1, "Add your cheat value here. Clear and use this field for the next cheat if you hav" &
+        "e one.")
         '
         'Address_1
         '
@@ -257,6 +276,8 @@ Partial Class CheatManage
         Me.Address_1.Name = "Address_1"
         Me.Address_1.Size = New System.Drawing.Size(84, 20)
         Me.Address_1.TabIndex = 25
+        Me.ToolTip1.SetToolTip(Me.Address_1, "Add your cheat address here. Clear and use this field for the next cheat if you h" &
+        "ave one.")
         '
         'CheatName_TextBox
         '
@@ -264,6 +285,8 @@ Partial Class CheatManage
         Me.CheatName_TextBox.Name = "CheatName_TextBox"
         Me.CheatName_TextBox.Size = New System.Drawing.Size(174, 20)
         Me.CheatName_TextBox.TabIndex = 24
+        Me.ToolTip1.SetToolTip(Me.CheatName_TextBox, "Add your cheat name here. Clear and use this field for the next cheat if you have" &
+        " one.")
         '
         'GameName_TextBox
         '
@@ -271,6 +294,8 @@ Partial Class CheatManage
         Me.GameName_TextBox.Name = "GameName_TextBox"
         Me.GameName_TextBox.Size = New System.Drawing.Size(175, 20)
         Me.GameName_TextBox.TabIndex = 23
+        Me.ToolTip1.SetToolTip(Me.GameName_TextBox, "The game name gets inserted here from rom load.. Clear this field if you are goin" &
+        "g to add another cheat to the same game" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
         '
         'CRC_TextBox
         '
@@ -278,6 +303,8 @@ Partial Class CheatManage
         Me.CRC_TextBox.Name = "CRC_TextBox"
         Me.CRC_TextBox.Size = New System.Drawing.Size(174, 20)
         Me.CRC_TextBox.TabIndex = 22
+        Me.ToolTip1.SetToolTip(Me.CRC_TextBox, "The game crc gets inserted here from rom load. Clear this field if you are going " &
+        "to add another cheat to the same game")
         '
         'Label1
         '
@@ -296,6 +323,24 @@ Partial Class CheatManage
         Me.Label2.Size = New System.Drawing.Size(88, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Add Game Name"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(4, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(88, 13)
+        Me.Label3.TabIndex = 33
+        Me.Label3.Text = "Add Cheat Name"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(4, 196)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.TabIndex = 34
+        Me.Label4.Text = "Add Cheat Code"
         '
         'CheatManage
         '
@@ -345,4 +390,6 @@ Partial Class CheatManage
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class
