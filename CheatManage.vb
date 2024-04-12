@@ -103,12 +103,14 @@ Public Class CheatManage
 
         startPos = TextBox1.Text.IndexOf(CRC_TextBox.Text, StringComparison.InvariantCultureIgnoreCase) - 1
         If startPos < -1 Then
-            startPos = TextBox1.TextLength - 1
-            AddNew = True
-        End If
-        endPos = TextBox1.Text.IndexOf("#", startPos + 1) - 1
-        If endPos < 0 Then
+            startPos = TextBox1.TextLength
             endPos = startPos
+            AddNew = True
+        Else
+            endPos = TextBox1.Text.IndexOf("#", startPos + 1) - 1
+            If endPos < 0 Then
+                endPos = TextBox1.TextLength
+            End If
         End If
 
         TextBox1.SelectionStart = startPos
@@ -118,6 +120,7 @@ Public Class CheatManage
 
         Dim CheatText As New StringBuilder()
         CheatText.Append(TextBox1.SelectedText)
+        Dim slctLen As Integer = endPos - startPos
 
         If AddNew Then
             CheatText.Append(vbNewLine & vbNewLine)
@@ -138,7 +141,10 @@ Public Class CheatManage
             Else
                 CheatText.Append(vbTab + vbTab & GNStart + "" + GameName_TextBox.Text + vbNewLine)
             End If
-
+        Else
+            If Not (CheatText.ToString().EndsWith(vbCr) OrElse CheatText.ToString().EndsWith(vbLf)) Then
+                CheatText.Append(vbCr)
+            End If
         End If
 
         If CheatName_TextBox.Text = "" Then
@@ -204,6 +210,12 @@ Public Class CheatManage
         End If
 
         TextBox1.SelectedText = CheatText.ToString()
+
+        TextBox1.SelectionStart = endPos
+        TextBox1.SelectionLength = CheatText.ToString().Replace(vbCr, "").Length - slctLen
+
+        TextBox1.ScrollToCaret()
+        TextBox1.Select()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
