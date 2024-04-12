@@ -736,3 +736,10 @@
 [Have 999999 Score]
 :FRAME
 @<$1A6=$99,$99,$99
+#$C2F43E0F		; Harry's Hen House V1.07F
+[Infinite Lives]
+:FRAME
+@<$226C=6
+[Have 999999 Score]
+:FRAME
+@<$257B=$99,$99,$99
