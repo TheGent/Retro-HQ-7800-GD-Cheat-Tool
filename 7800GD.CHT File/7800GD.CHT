@@ -721,3 +721,11 @@
 
 :FRAME
 @<$55=1
+
+#$6565EEFB		; Ghosts'n Goblins
+[Infinite Lives]
+:FRAME
+@<$F0=6
+[Invincible]       ;This lets you keep the armor and able to walk through all enemies without harm
+:FRAME
+@<$142=2
