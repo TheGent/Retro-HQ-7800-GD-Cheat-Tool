@@ -707,3 +707,54 @@
 [Have 1st Key]
 :FRAME
 @<$F7=1
+#$867894CC		; Get Lost!
+[Infinite Lives (No Deaths)]
+:FRAME
+@<$72=0
+[Have 98 in Loot]
+:FRAME
+@<$72=$98
+[Freeze Timer]
+:FRAME
+@<$60=0
+[High Jump (Hold A)] ; Hold A Button to rise and let go to float down. (Allowing you to navigate your decent)
+
+:FRAME
+@<$55=1
+
+#$6565EEFB		; Ghosts'n Goblins
+[Infinite Lives]
+:FRAME
+@<$F0=6
+[Invincible]       ;This lets you keep the armor and able to walk through all enemies without harm
+:FRAME
+@<$142=2
+#$99CE56B2		; GoSub
+[Infinite Lives]
+:FRAME
+@<$142=$99
+[Have 999999 Score]
+:FRAME
+@<$1A6=$99,$99,$99
+#$C2F43E0F		; Harry's Hen House V1.07F
+[Infinite Lives]
+:FRAME
+@<$226C=6
+[Have 999999 Score]
+:FRAME
+@<$257B=$99,$99,$99
+
+#$FEAC91D3		; High Card Draw
+[Player 1 Always Has a Queen]
+:FRAME
+@<$E8=F
+@<$1CFA=$66
+[Dealer Always Has a 2]
+:FRAME
+@<$E9=2
+@<$1D08=$52
+
+#$68EA4354		; Hollywood Brawler
+[Infinite 999 Health]
+:FRAME
+@<$1A9=9,$99
