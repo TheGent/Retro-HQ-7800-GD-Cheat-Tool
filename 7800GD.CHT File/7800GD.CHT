@@ -753,3 +753,8 @@
 :FRAME
 @<$E9=2
 @<$1D08=$52
+
+#$68EA4354		; Hollywood Brawler
+[Infinite 999 Health]
+:FRAME
+@<$1A9=9,$99
