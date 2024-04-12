@@ -707,3 +707,17 @@
 [Have 1st Key]
 :FRAME
 @<$F7=1
+#$867894CC		; Get Lost!
+[Infinite Lives (No Deaths)]
+:FRAME
+@<$72=0
+[Have 98 in Loot]
+:FRAME
+@<$72=$98
+[Freeze Timer]
+:FRAME
+@<$60=0
+[High Jump (Hold A)] ; Hold A Button to rise and let go to float down. (Allowing you to navigate your decent)
+
+:FRAME
+@<$55=1
