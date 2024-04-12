@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports System.Text
+
 Public Class CheatManage
 
     Dim CRCL1 As String = "#"           ' This is the start Hash for the CRC entry
@@ -36,6 +38,22 @@ Public Class CheatManage
             If .ShowDialog = Windows.Forms.DialogResult.OK Then
                 Dim tCRC As CRC_A78 = New CRC_A78()
                 tCRC.GenerateA78CRC(.FileName, GameName_TextBox.Text, CRC_TextBox.Text)
+                If TextBox1.Lines.Length > 0 Then
+                    Dim MatchCRC As String = CRC_TextBox.Text.ToLower()
+                    For I = 0 To TextBox1.Lines.Length - 1
+                        Dim tLine As String = TextBox1.Lines(I).ToLower()
+                        If tLine.Contains(MatchCRC) Then
+                            TextBox1.SelectionStart = TextBox1.Find(TextBox1.Lines(I))
+                            TextBox1.SelectionLength = MatchCRC.Length + 1
+                            TextBox1.ScrollToCaret()
+                            Dim pt As New System.Drawing.Point()
+                            RtfScroll(RichTextBox1.Handle, EM_GETSCROLLPOS, 0, pt)
+                            RtfScroll(TextBox1.Handle, EM_SETSCROLLPOS, 0, pt)
+                            TextBox1.Select()
+                            Exit For
+                        End If
+                    Next
+                End If
             End If
         End With
     End Sub
@@ -79,87 +97,113 @@ Public Class CheatManage
     End Sub
 
     Private Sub SUBMIT_BTN_Click(sender As System.Object, e As System.EventArgs) Handles SUBMIT_BTN.Click
-        TextBox1.AppendText(vbNewLine)
-        If CRC_TextBox.Text = "" Then
-            TextBox1.AppendText(CRCNo + "")
-            MessageBox.Show("Please enter Game CRC before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
-        Else
-            TextBox1.AppendText(CRCL1 + "" + CRC_TextBox.Text)
+        Dim startPos As Integer = 0
+        Dim endPos As Integer = 0
+        Dim AddNew As Boolean = False
+
+        startPos = TextBox1.Text.IndexOf(CRC_TextBox.Text, StringComparison.InvariantCultureIgnoreCase) - 1
+        If startPos < -1 Then
+            startPos = TextBox1.TextLength - 1
+            AddNew = True
+        End If
+        endPos = TextBox1.Text.IndexOf("#", startPos + 1) - 1
+        If endPos < 0 Then
+            endPos = startPos
         End If
 
-        If GameName_TextBox.Text = "" Then
-            TextBox1.AppendText(CRCNo + "")
-            MessageBox.Show("Please enter Game Name before continuing", "Press OK to continue",
+        TextBox1.SelectionStart = startPos
+        TextBox1.SelectionLength = endPos - startPos
+        TextBox1.ScrollToCaret()
+        TextBox1.Select()
+
+        Dim CheatText As New StringBuilder()
+        CheatText.Append(TextBox1.SelectedText)
+
+        If AddNew Then
+            CheatText.Append(vbNewLine & vbNewLine)
+            If CRC_TextBox.Text = "" Then
+                CheatText.Append(CRCNo + "")
+                MessageBox.Show("Please enter Game CRC before continuing", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
-        Else
-            TextBox1.AppendText(vbTab + vbTab & GNStart + "" + GameName_TextBox.Text + vbNewLine)
+            Else
+                CheatText.Append(CRCL1 + "" + CRC_TextBox.Text)
+            End If
+
+            If GameName_TextBox.Text = "" Then
+                CheatText.Append(CRCNo + "")
+                MessageBox.Show("Please enter Game Name before continuing", "Press OK to continue",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+            Else
+                CheatText.Append(vbTab + vbTab & GNStart + "" + GameName_TextBox.Text + vbNewLine)
+            End If
+
         End If
 
         If CheatName_TextBox.Text = "" Then
-            TextBox1.AppendText(CNSNo + "" + CNENo + CNFNo)
+            CheatText.Append(CNSNo + "" + CNENo + CNFNo)
             MessageBox.Show("Please enter Cheat Name before continuing", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
         Else
-            TextBox1.AppendText(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
+            CheatText.Append(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
         End If
 
         If (String.IsNullOrEmpty(Address_1.Text) And String.IsNullOrEmpty(Value_1.Text)) Then
-            TextBox1.AppendText(ASNo + "" + VSNo + "")
+            CheatText.Append(ASNo + "" + VSNo + "")
             MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
 
             'If Value_1.Text >= 2 Then
-            '    TextBox1.AppendText(ValueStart + "" + Value2Plus + Value_1.Text + vbNewLine)
+            '    CheatText.Append(ValueStart + "" + Value2Plus + Value_1.Text + vbNewLine)
             'End If
         Else
-            TextBox1.AppendText(AddressStart + "" + Address_1.Text)
+            CheatText.Append(AddressStart + "" + Address_1.Text)
 
             If Value_1.Text.Length >= 2 Then
-                TextBox1.AppendText(ValueStart & "$" & Value_1.Text + vbNewLine)
+                CheatText.Append(ValueStart & "$" & Value_1.Text + vbNewLine)
             Else
-                TextBox1.AppendText(ValueStart & "" & Value_1.Text + vbNewLine)
+                CheatText.Append(ValueStart & "" & Value_1.Text + vbNewLine)
             End If
         End If
 
         If (String.IsNullOrEmpty(Address_2.Text) And String.IsNullOrEmpty(Value_2.Text)) Then
-            TextBox1.AppendText(ASNo + "" + VSNo + "")
+            CheatText.Append(ASNo + "" + VSNo + "")
             MessageBox.Show("Please enter Address 2 and Value 2 if you have any", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
 
             'If Value_2.Text >= 2 Then
-            '    TextBox1.AppendText(ValueStart + "" + Value2Plus + Value_2.Text + vbNewLine)
+            '    CheatText.Append(ValueStart + "" + Value2Plus + Value_2.Text + vbNewLine)
             'End If
         Else
-            TextBox1.AppendText(AddressStart + "" + Address_2.Text)
+            CheatText.Append(AddressStart + "" + Address_2.Text)
 
             If Value_2.Text.Length >= 2 Then
-                TextBox1.AppendText(ValueStart & "$" & Value_2.Text + vbNewLine)
+                CheatText.Append(ValueStart & "$" & Value_2.Text + vbNewLine)
             Else
-                TextBox1.AppendText(ValueStart & "" & Value_2.Text + vbNewLine)
+                CheatText.Append(ValueStart & "" & Value_2.Text + vbNewLine)
             End If
         End If
 
         If (String.IsNullOrEmpty(Address_3.Text) And String.IsNullOrEmpty(Value_3.Text)) Then
-            TextBox1.AppendText(ASNo + "" + VSNo + "")
+            CheatText.Append(ASNo + "" + VSNo + "")
             MessageBox.Show("Please enter an Address 3 and Value 3 if you have any", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
         Else
-            TextBox1.AppendText(AddressStart + "" + Address_3.Text)
+            CheatText.Append(AddressStart + "" + Address_3.Text)
 
             If Value_3.Text.Length >= 2 Then
-                TextBox1.AppendText(ValueStart & "$" & Value_3.Text + vbNewLine)
+                CheatText.Append(ValueStart & "$" & Value_3.Text + vbNewLine)
             Else
-                TextBox1.AppendText(ValueStart & "" & Value_3.Text + vbNewLine)
+                CheatText.Append(ValueStart & "" & Value_3.Text + vbNewLine)
             End If
         End If
 
+        TextBox1.SelectedText = CheatText.ToString()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -223,5 +267,9 @@ MessageBoxIcon.Information)
         Dim pt As New System.Drawing.Point()
         RtfScroll(TextBox1.Handle, EM_GETSCROLLPOS, 0, pt)
         RtfScroll(RichTextBox1.Handle, EM_SETSCROLLPOS, 0, pt)
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs)
+
     End Sub
 End Class
