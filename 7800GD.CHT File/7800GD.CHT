@@ -743,3 +743,13 @@
 [Have 999999 Score]
 :FRAME
 @<$257B=$99,$99,$99
+
+#$FEAC91D3		; High Card Draw
+[Player 1 Always Has a Queen]
+:FRAME
+@<$E8=F
+@<$1CFA=$66
+[Dealer Always Has a 2]
+:FRAME
+@<$E9=2
+@<$1D08=$52
