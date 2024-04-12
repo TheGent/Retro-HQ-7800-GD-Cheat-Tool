@@ -729,3 +729,10 @@
 [Invincible]       ;This lets you keep the armor and able to walk through all enemies without harm
 :FRAME
 @<$142=2
+#$99CE56B2		; GoSub
+[Infinite Lives]
+:FRAME
+@<$142=$99
+[Have 999999 Score]
+:FRAME
+@<$1A6=$99,$99,$99
