@@ -141,6 +141,14 @@ Public Class CheatManage
             Exit Sub
         End If
 
+        If String.IsNullOrEmpty(CheatName_TextBox.Text) Then
+            CheatText.Append(CNSNo + "" + CNENo + CNFNo)
+            MessageBox.Show("Please enter Cheat Name before continuing", "Press OK to continue",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
         If AddNew Then
             CheatText.Append(vbNewLine & vbNewLine)
             CheatText.Append(CRCL1 + "" + CRC_TextBox.Text)
@@ -151,15 +159,6 @@ Public Class CheatManage
             End If
         End If
 
-        If CheatName_TextBox.Text = "" Then
-            CheatText.Append(CNSNo + "" + CNENo + CNFNo)
-            MessageBox.Show("Please enter Cheat Name before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
-        Else
-            CheatText.Append(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
-        End If
-
         If (String.IsNullOrEmpty(Address_1.Text & Value_1.Text & Address_2.Text & Value_2.Text & Address_3.Text & Value_3.Text)) Then
             MessageBox.Show("Please enter a minimum of one Address and Value to create cheat", "Press OK to continue",
             MessageBoxButtons.OK,
@@ -167,11 +166,13 @@ Public Class CheatManage
             Exit Sub
         End If
 
+        CheatText.Append(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
+
         If (String.IsNullOrEmpty(Address_1.Text) And String.IsNullOrEmpty(Value_1.Text)) Then
-            CheatText.Append(ASNo + "" + VSNo + "")
-            MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
+            'CheatText.Append(ASNo + "" + VSNo + "")
+            'MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
+            'MessageBoxButtons.OK,
+            'MessageBoxIcon.Error)
         Else
             CheatText.Append(AddressStart + "" + Address_1.Text)
             Dim values1 As String = String.Join(",$", Value_1.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
