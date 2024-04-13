@@ -169,9 +169,9 @@ Public Class CheatManage
 
         If (String.IsNullOrEmpty(Address_2.Text) And String.IsNullOrEmpty(Value_2.Text)) Then
             CheatText.Append(ASNo + "" + VSNo + "")
-            MessageBox.Show("Please enter Address 2 and Value 2 if you have any", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
+            'MessageBox.Show("Please enter Address 2 and Value 2 if you have any", "Press OK to continue",
+            'MessageBoxButtons.OK,
+            'MessageBoxIcon.Error)
 
             'If Value_2.Text >= 2 Then
             '    CheatText.Append(ValueStart + "" + Value2Plus + Value_2.Text + vbNewLine)
@@ -184,9 +184,9 @@ Public Class CheatManage
 
         If (String.IsNullOrEmpty(Address_3.Text) And String.IsNullOrEmpty(Value_3.Text)) Then
             CheatText.Append(ASNo + "" + VSNo + "")
-            MessageBox.Show("Please enter an Address 3 and Value 3 if you have any", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
+            'MessageBox.Show("Please enter an Address 3 and Value 3 if you have any", "Press OK to continue",
+            'MessageBoxButtons.OK,
+            'MessageBoxIcon.Error)
         Else
             CheatText.Append(AddressStart + "" + Address_3.Text)
             Dim values3 As String = String.Join(",$", Value_3.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
@@ -213,8 +213,8 @@ Public Class CheatManage
         Address_3.Text = ""
         Value_3.Text = ""
         MessageBox.Show("All Data has been cleared!", "Press OK to continue",
-MessageBoxButtons.OK,
-MessageBoxIcon.Information)
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information)
 
     End Sub
 

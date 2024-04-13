@@ -26,13 +26,6 @@ Partial Class CheatManage
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheatManage))
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SUBMIT_BTN = New System.Windows.Forms.Button()
         Me.Value_3 = New System.Windows.Forms.TextBox()
@@ -45,17 +38,24 @@ Partial Class CheatManage
         Me.GameName_TextBox = New System.Windows.Forms.TextBox()
         Me.CRC_TextBox = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.ClearText = New System.Windows.Forms.Button()
-        Me.Close_Button = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Open_Button = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Close_Button = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -76,87 +76,6 @@ Partial Class CheatManage
         Me.RichTextBox1.Text = ""
         Me.ToolTip1.SetToolTip(Me.RichTextBox1, "Press Ctrl +G to go to an address  line.")
         Me.RichTextBox1.WordWrap = False
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        Me.OpenFileDialog1.Title = "Select ROM"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.RichTextBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(211, 36)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(420, 335)
-        Me.Panel1.TabIndex = 14
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(55, 0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(365, 335)
-        Me.TextBox1.TabIndex = 22
-        Me.TextBox1.Text = ""
-        Me.TextBox1.WordWrap = False
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(211, 414)
-        Me.Panel2.TabIndex = 16
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.SUBMIT_BTN)
-        Me.GroupBox1.Controls.Add(Me.Value_3)
-        Me.GroupBox1.Controls.Add(Me.Address_3)
-        Me.GroupBox1.Controls.Add(Me.Value_2)
-        Me.GroupBox1.Controls.Add(Me.Address_2)
-        Me.GroupBox1.Controls.Add(Me.Value_1)
-        Me.GroupBox1.Controls.Add(Me.Address_1)
-        Me.GroupBox1.Controls.Add(Me.CheatName_TextBox)
-        Me.GroupBox1.Controls.Add(Me.GameName_TextBox)
-        Me.GroupBox1.Controls.Add(Me.CRC_TextBox)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 14)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(190, 392)
-        Me.GroupBox1.TabIndex = 16
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Add New Game"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(4, 196)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
-        Me.Label4.TabIndex = 34
-        Me.Label4.Text = "Add Cheat Code"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(4, 147)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 13)
-        Me.Label3.TabIndex = 33
-        Me.Label3.Text = "Add Cheat Name"
         '
         'Button1
         '
@@ -265,24 +184,6 @@ Partial Class CheatManage
         Me.ToolTip1.SetToolTip(Me.Button2, "Insert Game CRC & Name into the Text Boxes")
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(5, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Add Game CRC"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(4, 95)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Add Game Name"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -302,17 +203,6 @@ Partial Class CheatManage
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Add Cheat Code 2?"
         Me.ToolTip1.SetToolTip(Me.Label5, "This is for a cheat entry with a second address and value")
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Save_Button)
-        Me.Panel3.Controls.Add(Me.ClearText)
-        Me.Panel3.Controls.Add(Me.Close_Button)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(211, 371)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(420, 43)
-        Me.Panel3.TabIndex = 17
         '
         'Save_Button
         '
@@ -334,25 +224,6 @@ Partial Class CheatManage
         Me.ClearText.Text = "Clear"
         Me.ToolTip1.SetToolTip(Me.ClearText, "This will clear / remove your 7800GD.cht file")
         Me.ClearText.UseVisualStyleBackColor = True
-        '
-        'Close_Button
-        '
-        Me.Close_Button.Location = New System.Drawing.Point(276, 10)
-        Me.Close_Button.Name = "Close_Button"
-        Me.Close_Button.Size = New System.Drawing.Size(127, 23)
-        Me.Close_Button.TabIndex = 22
-        Me.Close_Button.Text = "Close"
-        Me.Close_Button.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.Open_Button)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(211, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(420, 36)
-        Me.Panel4.TabIndex = 18
         '
         'Button3
         '
@@ -376,12 +247,141 @@ Partial Class CheatManage
         "7800GD.cht file.")
         Me.Open_Button.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.Title = "Select ROM"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.RichTextBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(211, 36)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(420, 335)
+        Me.Panel1.TabIndex = 14
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(55, 0)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(365, 335)
+        Me.TextBox1.TabIndex = 22
+        Me.TextBox1.Text = ""
+        Me.TextBox1.WordWrap = False
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(211, 414)
+        Me.Panel2.TabIndex = 16
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.SUBMIT_BTN)
+        Me.GroupBox1.Controls.Add(Me.Value_3)
+        Me.GroupBox1.Controls.Add(Me.Address_3)
+        Me.GroupBox1.Controls.Add(Me.Value_2)
+        Me.GroupBox1.Controls.Add(Me.Address_2)
+        Me.GroupBox1.Controls.Add(Me.Value_1)
+        Me.GroupBox1.Controls.Add(Me.Address_1)
+        Me.GroupBox1.Controls.Add(Me.CheatName_TextBox)
+        Me.GroupBox1.Controls.Add(Me.GameName_TextBox)
+        Me.GroupBox1.Controls.Add(Me.CRC_TextBox)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 14)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(190, 392)
+        Me.GroupBox1.TabIndex = 16
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Add New Game"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(4, 196)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.TabIndex = 34
+        Me.Label4.Text = "Add Cheat Code"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(4, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(88, 13)
+        Me.Label3.TabIndex = 33
+        Me.Label3.Text = "Add Cheat Name"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(5, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(82, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Add Game CRC"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(4, 95)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Add Game Name"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Save_Button)
+        Me.Panel3.Controls.Add(Me.ClearText)
+        Me.Panel3.Controls.Add(Me.Close_Button)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(211, 371)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(420, 43)
+        Me.Panel3.TabIndex = 17
+        '
+        'Close_Button
+        '
+        Me.Close_Button.Location = New System.Drawing.Point(276, 10)
+        Me.Close_Button.Name = "Close_Button"
+        Me.Close_Button.Size = New System.Drawing.Size(127, 23)
+        Me.Close_Button.TabIndex = 22
+        Me.Close_Button.Text = "Close"
+        Me.Close_Button.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Button3)
+        Me.Panel4.Controls.Add(Me.Open_Button)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(211, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(420, 36)
+        Me.Panel4.TabIndex = 18
+        '
         'CheatManage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(627, 410)
+        Me.ClientSize = New System.Drawing.Size(631, 414)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
