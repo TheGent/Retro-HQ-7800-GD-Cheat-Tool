@@ -161,18 +161,10 @@ Public Class CheatManage
             MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
-
-            'If Value_1.Text >= 2 Then
-            '    CheatText.Append(ValueStart + "" + Value2Plus + Value_1.Text + vbNewLine)
-            'End If
         Else
             CheatText.Append(AddressStart + "" + Address_1.Text)
-
-            If Value_1.Text.Length >= 2 Then
-                CheatText.Append(ValueStart & "$" & Value_1.Text + vbNewLine)
-            Else
-                CheatText.Append(ValueStart & "" & Value_1.Text + vbNewLine)
-            End If
+            Dim values1 As String = String.Join(",$", Value_1.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+            CheatText.Append(ValueStart & "$" & values1 + vbNewLine)
         End If
 
         If (String.IsNullOrEmpty(Address_2.Text) And String.IsNullOrEmpty(Value_2.Text)) Then
@@ -186,12 +178,8 @@ Public Class CheatManage
             'End If
         Else
             CheatText.Append(AddressStart + "" + Address_2.Text)
-
-            If Value_2.Text.Length >= 2 Then
-                CheatText.Append(ValueStart & "$" & Value_2.Text + vbNewLine)
-            Else
-                CheatText.Append(ValueStart & "" & Value_2.Text + vbNewLine)
-            End If
+            Dim values2 As String = String.Join(",$", Value_2.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+            CheatText.Append(ValueStart & "$" & values2 + vbNewLine)
         End If
 
         If (String.IsNullOrEmpty(Address_3.Text) And String.IsNullOrEmpty(Value_3.Text)) Then
@@ -201,12 +189,8 @@ Public Class CheatManage
             MessageBoxIcon.Error)
         Else
             CheatText.Append(AddressStart + "" + Address_3.Text)
-
-            If Value_3.Text.Length >= 2 Then
-                CheatText.Append(ValueStart & "$" & Value_3.Text + vbNewLine)
-            Else
-                CheatText.Append(ValueStart & "" & Value_3.Text + vbNewLine)
-            End If
+            Dim values3 As String = String.Join(",$", Value_3.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+            CheatText.Append(ValueStart & "$" & values3 + vbNewLine)
         End If
 
         TextBox1.SelectedText = CheatText.ToString()
