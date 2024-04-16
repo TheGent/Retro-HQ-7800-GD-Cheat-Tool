@@ -1,5 +1,5 @@
 ; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
-; --------------------------- Version 1.0 9th April 2024
+; --------------------------- Version 1.0 16th April 2024
 ; --------------------------- copyright © Gent  - https://github.com/TheGent
 ; --------------------------- you can contact me on the Emucheats Discord server
 ; --------------------------- here at https://discord.gg/wa4mPRCBFH
@@ -758,3 +758,15 @@
 [Infinite 999 Health]
 :FRAME
 @<$1A9=9,$99
+
+
+#$53E3154A		; I Ran
+[Infinite Lives]
+:FRAME
+@<$FB=$63
+[Invincible]      ; Nothing can harm you and you never die
+:FRAME
+@<$F6=$00
+[Have 999999 Score]
+:FRAME
+@<$1A6=$99,$99,$99
