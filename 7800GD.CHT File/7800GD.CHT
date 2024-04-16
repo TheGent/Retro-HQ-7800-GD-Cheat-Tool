@@ -770,3 +770,13 @@
 [Have 999999 Score]
 :FRAME
 @<$1A6=$99,$99,$99
+
+
+#$B3856636,$0445971F	; Jr. Pac-Man (NTSC) & Jr. Pac-Man (PAL)
+[Infinite Lives Both Players]
+:FRAME
+@<$A3=$6,$6
+[Ghost Eating Mode Both Players]
+:FRAME
+@<$2135=$8,$8,$8,$8 ; This gives you the eating ability without all the flashing blue effect.
+
