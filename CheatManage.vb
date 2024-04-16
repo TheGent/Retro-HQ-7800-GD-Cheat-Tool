@@ -113,6 +113,9 @@ Public Class CheatManage
             End If
         End If
 
+        If startPos < 0 Then startPos = 0
+        If endPos < 0 Then endPos = 0
+
         TextBox1.SelectionStart = startPos
         TextBox1.SelectionLength = endPos - startPos
         TextBox1.ScrollToCaret()
@@ -122,45 +125,54 @@ Public Class CheatManage
         CheatText.Append(TextBox1.SelectedText)
         Dim slctLen As Integer = endPos - startPos
 
+        If CRC_TextBox.Text = "" Then
+            CheatText.Append(CRCNo + "")
+            MessageBox.Show("Please enter Game CRC before continuing", "Press OK to continue",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        If GameName_TextBox.Text = "" Then
+            CheatText.Append(CRCNo + "")
+            MessageBox.Show("Please enter Game Name before continuing", "Press OK to continue",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        If String.IsNullOrEmpty(CheatName_TextBox.Text) Then
+            CheatText.Append(CNSNo + "" + CNENo + CNFNo)
+            MessageBox.Show("Please enter Cheat Name before continuing", "Press OK to continue",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
         If AddNew Then
             CheatText.Append(vbNewLine & vbNewLine)
-            If CRC_TextBox.Text = "" Then
-                CheatText.Append(CRCNo + "")
-                MessageBox.Show("Please enter Game CRC before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
-            Else
-                CheatText.Append(CRCL1 + "" + CRC_TextBox.Text)
-            End If
-
-            If GameName_TextBox.Text = "" Then
-                CheatText.Append(CRCNo + "")
-                MessageBox.Show("Please enter Game Name before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
-            Else
-                CheatText.Append(vbTab + vbTab & GNStart + "" + GameName_TextBox.Text + vbNewLine)
-            End If
+            CheatText.Append(CRCL1 + "" + CRC_TextBox.Text)
+            CheatText.Append(vbTab + vbTab & GNStart + "" + GameName_TextBox.Text + vbNewLine)
         Else
             If Not (CheatText.ToString().EndsWith(vbCr) OrElse CheatText.ToString().EndsWith(vbLf)) Then
                 CheatText.Append(vbCr)
             End If
         End If
 
-        If CheatName_TextBox.Text = "" Then
-            CheatText.Append(CNSNo + "" + CNENo + CNFNo)
-            MessageBox.Show("Please enter Cheat Name before continuing", "Press OK to continue",
+        If (String.IsNullOrEmpty(Address_1.Text & Value_1.Text & Address_2.Text & Value_2.Text & Address_3.Text & Value_3.Text)) Then
+            MessageBox.Show("Please enter a minimum of one Address and Value to create cheat", "Press OK to continue",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
-        Else
-            CheatText.Append(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
+            Exit Sub
         End If
 
+        CheatText.Append(CNStart + "" + CheatName_TextBox.Text + CNEnd + vbNewLine + CNFRAME + vbNewLine)
+
         If (String.IsNullOrEmpty(Address_1.Text) And String.IsNullOrEmpty(Value_1.Text)) Then
-            CheatText.Append(ASNo + "" + VSNo + "")
-            MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error)
+            'CheatText.Append(ASNo + "" + VSNo + "")
+            'MessageBox.Show("Please enter an Address and Value before continuing", "Press OK to continue",
+            'MessageBoxButtons.OK,
+            'MessageBoxIcon.Error)
         Else
             CheatText.Append(AddressStart + "" + Address_1.Text)
             Dim values1 As String = String.Join(",$", Value_1.Text.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
