@@ -824,3 +824,11 @@
 [Have Sword]
 :FRAME
 @<$EF=$1
+
+#$339BA7DF		; Krull
+[Infinite Lives]
+:FRAME
+@<$E8=$6
+[Have 999999 Score]
+:FRAME
+@<$1A6=$99,$99,$99
