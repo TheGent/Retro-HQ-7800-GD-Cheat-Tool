@@ -810,3 +810,17 @@
 :FRAME
 @<$F8=$1
 
+#$A5DCF747		; Knight Guy - Castle Days
+[Infinite Lives]
+:FRAME
+@<$EA=$99
+[Invincible (Rewind)] ; This places you back to previous position without dying
+
+:FRAME
+@<$151=$0
+[Freeze Timer]
+:FRAME
+@<$177=$0,$0
+[Have Sword]
+:FRAME
+@<$EF=$1
