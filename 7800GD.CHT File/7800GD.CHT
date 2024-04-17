@@ -781,7 +781,6 @@
 @<$2135=$8,$8,$8,$8 ; This gives you the eating ability without all the flashing blue effect.
 
 
-
 #$9D34C591		; Knight Guy - In Another Castle
 [Infinite Lives]
 :FRAME
@@ -792,4 +791,22 @@
 [Invincible (Disable for Ladders)]
 :FRAME
 @<$F0=$0
+
+
+#$F223ADFC		; Knight Guy - Quest For Something
+[Infinite Lives]
+:FRAME
+@<$F4=$63
+[Invincible (Disable if stuck)]
+:FRAME
+@<$F3=$0
+[Have Sword]
+:FRAME
+@<$F0=$1
+[Have Key]
+:FRAME
+@<$F7=$1
+[Have Power Gauntlet]
+:FRAME
+@<$F8=$1
 
