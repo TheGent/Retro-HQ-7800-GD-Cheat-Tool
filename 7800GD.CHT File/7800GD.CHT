@@ -1,5 +1,5 @@
 ; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
-; --------------------------- Version 1.0 16th April 2024
+; --------------------------- Version 1.0 17th April 2024
 ; --------------------------- copyright © Gent  - https://github.com/TheGent
 ; --------------------------- you can contact me on the Emucheats Discord server
 ; --------------------------- here at https://discord.gg/wa4mPRCBFH
@@ -780,3 +780,15 @@
 :FRAME
 @<$2135=$8,$8,$8,$8 ; This gives you the eating ability without all the flashing blue effect.
 
+
+
+#$F223ADFC		; Knight Guy - Quest For Something
+[Infinite Lives]
+:FRAME
+@<$FD=$63
+[Freeze Timer]
+:FRAME
+@<$1A7=$30,$0
+[Invincible (Disable for Ladders)]
+:FRAME
+@<$F0=$0
