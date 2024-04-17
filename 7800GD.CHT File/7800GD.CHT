@@ -327,9 +327,6 @@
 [Infinite Lives]
 :FRAME
 @<$241E=$84
-[Infinite Energy]
-:FRAME
-@<$26C3=7
 [Infinite Ammo]
 :FRAME
 @<$26D9=$50
