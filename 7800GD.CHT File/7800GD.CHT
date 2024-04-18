@@ -847,3 +847,13 @@ $29B7B884,$55555C30	; Meteor Shower NTSC & Meteor Shower PAL V1.1
 [Have 999999 Score]
 :FRAME
 @<$1A6=$99,$99,$99
+
+#$DEF345B2,$045198B6	; Moon Cresta NTSC &  Moon Cresta PAL 
+[Infinite Lives Player 1]
+:FRAME
+@<$86=$7
+@<$88=$1
+[Infinite Lives Player 2]
+:FRAME
+@<$87=$7
+@<$89=$1
