@@ -836,3 +836,14 @@ $29B7B884,$55555C30	; Meteor Shower NTSC & Meteor Shower PAL V1.1
 [Infinite Lives]
 :FRAME
 @<$8F=$4
+
+#$881388A2		; Monster Maze
+[Infinite Lives]
+:FRAME
+@<$239D=$63
+[Invincible]
+:FRAME
+@<$14C=$63
+[Have 999999 Score]
+:FRAME
+@<$1A6=$99,$99,$99
