@@ -877,3 +877,11 @@
 [Infinite Items]
 :FRAME
 @<$168=$99
+
+#$1C446D3D		; Oozy The Goo - Gaiden
+[Infinite Timer]
+:FRAME
+@<$1A8=$99
+[Invincible]
+:FRAME
+@<$161=$0
