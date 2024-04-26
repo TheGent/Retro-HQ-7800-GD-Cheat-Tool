@@ -832,7 +832,7 @@
 :FRAME
 @<$1A6=$99,$99,$99
 
-$29B7B884,$55555C30	; Meteor Shower NTSC & Meteor Shower PAL V1.1
+#$29B7B884,$55555C30	; Meteor Shower NTSC & Meteor Shower PAL V1.1
 [Infinite Lives]
 :FRAME
 @<$8F=$4
@@ -857,3 +857,12 @@ $29B7B884,$55555C30	; Meteor Shower NTSC & Meteor Shower PAL V1.1
 :FRAME
 @<$87=$7
 @<$89=$1
+
+#$9A534685		; Ninjish Guy - Perilous Guy
+[Infinite Max Lives]
+:FRAME
+@<$E9=$99
+[Have Infinite Max Throwing-Stars]
+:FRAME
+@<$F3=$63
+@<$F8=$1
