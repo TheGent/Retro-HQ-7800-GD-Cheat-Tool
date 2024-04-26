@@ -866,3 +866,14 @@
 :FRAME
 @<$F3=$63
 @<$F8=$1
+
+#$3CB41344		; Number Crusher
+[Infinite Fuel]
+:FRAME
+@<$167=$63
+[Infinite Ammo]
+:FRAME
+@<$166=$99
+[Infinite Items]
+:FRAME
+@<$168=$99
