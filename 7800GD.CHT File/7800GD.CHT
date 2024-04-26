@@ -904,3 +904,11 @@
 [Ghost Eating Mode]
 :FRAME
 @<$2140=$8,$8,$8,$8
+
+#$2AD99264,$8E1C4E04		; Scramble NTSC/PAL
+[Infinite Lives]
+:FRAME
+@<$D6=$9
+[Infinite Fuel]
+:FRAME
+@<$DB=$A7
