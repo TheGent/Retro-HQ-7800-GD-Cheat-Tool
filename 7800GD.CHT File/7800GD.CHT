@@ -920,3 +920,8 @@
 [Invincible]
 :FRAME
 @<$140=$0
+
+#$3D9C93EE		; Sick Pickles
+[Sick Pickles don't count]  ; Never get punished for eating a sick picle as they do not count
+:FRAME
+@<$EA=$0
