@@ -947,3 +947,11 @@
 [Have Perfect Control (Disable before the end of level] ; This allows you to have normal control. Disable before the end of level to continue to the next
 :FRAME
 @<$EA=$0
+
+#$3B77AE21,$CA0D6A5E		; Space Duel NTSC/PAL
+[Infinite Lives]
+:FRAME
+@<$52=$5
+[Infinite Shield]
+:FRAME
+@<$1B40=$3E
