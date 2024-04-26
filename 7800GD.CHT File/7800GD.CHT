@@ -912,3 +912,11 @@
 [Infinite Fuel]
 :FRAME
 @<$DB=$A7
+
+#$06F50F5E		; Shoot The UFO 2015
+[Infinite Lives]
+:FRAME
+@<$EA=$9
+[Invincible]
+:FRAME
+@<$140=$0
