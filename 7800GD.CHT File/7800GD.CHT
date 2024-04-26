@@ -955,3 +955,12 @@
 [Infinite Shield]
 :FRAME
 @<$1B40=$3E
+
+#$5033D1F6		; Space Invaders
+[Infinite Lives]
+:FRAME
+@<$72=$9
+[Invincible]
+:FRAME
+@<$C0=$0
+@<$24D7=$6F
