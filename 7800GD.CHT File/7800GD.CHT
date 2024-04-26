@@ -936,3 +936,14 @@
 [Invincible]
 :FRAME
 @<$150=$0         ; Disable if stuck or falling in a loop
+
+#$F4A22AFB		; Slide Boy in Maze Land
+[Infinite Lives]
+:FRAME
+@<$F8=$9
+[Infinite Timer (Disable before the end of level)] ; Disable before the end of level to continue to the next
+:FRAME
+@<$155=$3C
+[Have Perfect Control (Disable before the end of level] ; This allows you to have normal control. Disable before the end of level to continue to the next
+:FRAME
+@<$EA=$0
