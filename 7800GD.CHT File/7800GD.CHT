@@ -925,3 +925,14 @@
 [Sick Pickles don't count]  ; Never get punished for eating a sick picle as they do not count
 :FRAME
 @<$EA=$0
+
+#$A5C25566		; Sky Scraper 2115
+[Infinite Lives]
+:FRAME
+@<$195=$99
+[Have 99 Tokens]
+:FRAME
+@<$199=$99
+[Invincible]
+:FRAME
+@<$150=$0         ; Disable if stuck or falling in a loop
