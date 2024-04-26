@@ -885,3 +885,14 @@
 [Invincible]
 :FRAME
 @<$161=$0
+
+#$E9B8E60A		; Pac-Man Energy Drink Edition
+[Infinite Lives Player 1]
+:FRAME
+@<$88=$7
+[Infinite Lives Player 2]
+:FRAME
+@<$89=$7
+[Ghost Eating Mode Both Players]
+:FRAME
+@<$26C2=$1,$1,$1,$1
