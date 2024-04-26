@@ -896,3 +896,11 @@
 [Ghost Eating Mode Both Players]
 :FRAME
 @<$26C2=$1,$1,$1,$1
+
+#$BB93DAD3,$C2D1A39D	; Pac-Man Collection - Remastered
+[Infinite Lives]
+:FRAME
+@<$A3=$6
+[Ghost Eating Mode]
+:FRAME
+@<$2140=$8,$8,$8,$8
