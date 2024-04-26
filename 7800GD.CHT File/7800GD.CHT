@@ -897,7 +897,7 @@
 :FRAME
 @<$26C2=$1,$1,$1,$1
 
-#$BB93DAD3,$C2D1A39D	; Pac-Man Collection - Remastered
+#$BB93DAD3,$C2D1A39D,$FA8128B1,$4A197B2E	; Pac-Man Collection - Remastered NTSC/PAL & Pac-Man Collection - Ultimate Edition NTSC/PAL
 [Infinite Lives]
 :FRAME
 @<$A3=$6
