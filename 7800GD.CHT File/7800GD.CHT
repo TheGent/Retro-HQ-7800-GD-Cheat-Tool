@@ -999,3 +999,14 @@
 [Ghost Eating Mode Both Players]
 :FRAME
 @<$2140=$8,$8,$8,$8
+
+#$9446D28C		; The Big Burrito
+[Infinite Lives]
+:FRAME
+@<$2562=$3
+[Have Brick (Weapon)]
+:FRAME
+@<$220A=$1
+[Infinite Bricks (Ammo)]
+:FRAME
+@<$2215=$8
