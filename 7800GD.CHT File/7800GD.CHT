@@ -978,3 +978,12 @@
 [Freeze Timer]
 :FRAME
 @<$F8=$3B
+
+#$190AEBCA,$2F38883E,$14B46189,$9F25C71E		; Super Circus AA-NTSC&PAL-Joy&Pad-0450,4000
+[Infinite Lives]
+:FRAME
+@<$8F=$6
+[Have safety net (Never die)]              ; Youi will always bounce on a safety net and never die
+:FRAME
+@<$D3=$1
+@<$1D81=$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2
