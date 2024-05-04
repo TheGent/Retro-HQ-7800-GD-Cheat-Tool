@@ -63,6 +63,15 @@
 :FRAME
 @<$2260=$99,9
 
+#$2B7038CE,$8B39A792		; Choplifter (NTSC/PAL)
+[Infinite Sorties]			; Always on 1st Sortie
+:FRAME
+@<$1933=0
+@<$193A=0
+[Invincible]				; Can not be blown up or die
+:FRAME
+@<$18AB=0
+
 #$6aa8dd24,$e8457a5e		; Centipede
 [Infinite Lives]
 :FRAME
