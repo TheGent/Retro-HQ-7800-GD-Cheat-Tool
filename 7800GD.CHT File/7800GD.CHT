@@ -1041,3 +1041,11 @@
 @<$25B5=$0
 @<$25B7=$F8
 @<$25B9=$1C
+
+#$164ACCF0		; Wasp! (Standard Edition)
+[Infinite Health]
+:FRAME
+@<$24D8=$30
+[Infinite Lives]
+:FRAME
+@<$24D9=$5
