@@ -1010,3 +1010,8 @@
 [Infinite Bricks (Ammo)]
 :FRAME
 @<$2215=$8
+
+#$F94E4392		; TiME Salvo
+[Infinite Lives]
+:FRAME
+@<$FD=$5
