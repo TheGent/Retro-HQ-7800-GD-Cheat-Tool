@@ -1049,3 +1049,11 @@
 [Infinite Lives]
 :FRAME
 @<$24D9=$5
+
+#$19EE3BF4		; Wizard's Dungeon
+[Infinite Health]
+:FRAME
+@<$2398=$63
+[Have All Weapons]
+:FRAME
+@<$16A=$F
