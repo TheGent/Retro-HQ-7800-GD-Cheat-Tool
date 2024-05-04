@@ -7,13 +7,7 @@
 
 ; --------------------------- Start of Data FIle ---------------------------------------------------------
 
-#$24227e7e					; Crossbow, NTSC
-[Light Gun Calibration]		; cheat option, will always have ON/OFF
-?[Offset]=B{0-7}:3			; parameter, can be altered in-game, range 0-7, default 3
-:ON							; on action
-@$d3b=$d0,[Offset]			; bne offset
-:OFF						; off action
-@$d3b=$ea,$ea				; nop nop
+; --------------------------- Below is the start of cheat support
 
 ; --------------------------- RETAIL GAMES ---------------------------------------------------------
 
@@ -63,6 +57,11 @@
 :FRAME
 @<$2260=$99,9
 
+#$6aa8dd24,$e8457a5e		; Centipede
+[Infinite Lives]
+:FRAME
+@<$210E=3
+
 #$2B7038CE,$8B39A792		; Choplifter (NTSC/PAL)
 [Infinite Sorties]			; Always on 1st Sortie
 :FRAME
@@ -72,11 +71,6 @@
 :FRAME
 @<$18AB=0
 
-#$6aa8dd24,$e8457a5e		; Centipede
-[Infinite Lives]
-:FRAME
-@<$210E=3
-
 #$3a2106f4,$04f607c9		; Commando
 [Infinite Bombs]
 :FRAME
@@ -84,6 +78,17 @@
 [Infinite Lives]
 :FRAME
 @<$27B4=$99,$99				; p1, p2
+
+#$24227e7e,$C8C7FF31		; Crossbow Light Gun (NTSC/PAL)
+[Light Gun Calibration]		; cheat option, will always have ON/OFF
+?[Offset]=B{0-7}:3			; parameter, can be altered in-game, range 0-7, default 3
+:ON							; on action
+@$d3b=$d0,[Offset]			; bne offset
+:OFF						; off action
+@$d3b=$ea,$ea				; nop nop
+[100% Survival Rate]
+:FRAME
+@<$8C=0,0,0
 
 #$dba8f21c,$d6f6cb9f		; Dark Chambers
 [Infinite Health]
