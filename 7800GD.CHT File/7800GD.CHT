@@ -1057,3 +1057,8 @@
 [Have All Weapons]
 :FRAME
 @<$16A=$F
+
+#$34030A94		; Worm! (v1.16F)
+[Infinite Lives]
+:FRAME
+@<$2397=$5
