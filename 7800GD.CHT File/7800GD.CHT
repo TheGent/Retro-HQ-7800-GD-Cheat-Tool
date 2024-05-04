@@ -1,5 +1,5 @@
 ; --------------------------- The official 7800GD.CHT file by Gent for the 7800 GameDrive
-; --------------------------- Version 1.0 17th April 2024
+; --------------------------- Version 1.0 5th May 2024
 ; --------------------------- copyright © Gent  - https://github.com/TheGent
 ; --------------------------- you can contact me on the Emucheats Discord server
 ; --------------------------- here at https://discord.gg/wa4mPRCBFH
@@ -1081,4 +1081,7 @@
 [Infinite Lives]
 :FRAME
 @<$2397=$5
+
+; --------------------------- Anything below was placed here by you.
+
 
