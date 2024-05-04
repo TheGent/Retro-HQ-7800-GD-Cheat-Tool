@@ -1023,3 +1023,21 @@
 [Invincible (Disable end off level)]
 :FRAME
 @<$EB=$0
+
+#$C71A8F47		; UniWarS
+[Infinite Lives Player 1]
+:FRAME
+@<$DE=$6
+[Infinite Lives Player 2]
+:FRAME
+@<$DF=$6
+[Invincible Player 1]
+:FRAME
+@<$25B4=$0
+@<$25B6=$F8
+@<$25B8=$1C
+[Invincible Player 2]
+:FRAME
+@<$25B5=$0
+@<$25B7=$F8
+@<$25B9=$1C
