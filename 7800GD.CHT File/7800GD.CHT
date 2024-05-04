@@ -47,6 +47,11 @@
 :FRAME
 @<$52=5,5,5					; 1p, 2p, co-op
 
+#$C20DFFB2,$697B6B94		; Ballblazer (NTSC/PAL)
+[Freeze Timer]
+:FRAME
+@<$2021=$3,$0,$0,$1
+
 #$f7f1b8c1,$9436c704		; Basketbrawl
 [Freeze Timer]
 :FRAME
@@ -1062,3 +1067,4 @@
 [Infinite Lives]
 :FRAME
 @<$2397=$5
+
