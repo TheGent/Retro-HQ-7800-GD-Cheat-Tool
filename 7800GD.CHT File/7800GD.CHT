@@ -973,3 +973,8 @@
 :FRAME
 @<$180=$0
 @<$19A=$0
+
+#$2E7D90A9		; Space Race
+[Freeze Timer]
+:FRAME
+@<$F8=$3B
