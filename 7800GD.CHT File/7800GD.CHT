@@ -987,3 +987,15 @@
 :FRAME
 @<$D3=$1
 @<$1D81=$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2,$D2
+
+
+#$B58AA25E,$8B7CDE7E		; Super Pac-Man (NTSC/PAL)
+[Infinite Lives Player 1]
+:FRAME
+@<$A3=$6
+[Infinite Lives Player 2]
+:FRAME
+@<$A4=$6
+[Ghost Eating Mode Both Players]
+:FRAME
+@<$2140=$8,$8,$8,$8
