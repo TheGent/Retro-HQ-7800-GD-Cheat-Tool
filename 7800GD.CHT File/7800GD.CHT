@@ -964,3 +964,12 @@
 :FRAME
 @<$C0=$0
 @<$24D7=$6F
+
+#$A8BFC59B		; Space Junk
+[Infinite Lives]
+:FRAME
+@<$1A9=$9
+[Invincible]
+:FRAME
+@<$180=$0
+@<$19A=$0
